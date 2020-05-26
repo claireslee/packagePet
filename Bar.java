@@ -14,24 +14,20 @@ public class Bar extends Application {
 	private TextField tfNumber2 = new TextField();
     private TextField tfResult = new TextField();
     
-	private Button btAdd = new Button("Food");
-	private Button btSubtract = new Button("Shower");
-	private Button btMultiply = new Button("Death");
-    private Button btDivide = new Button("Clothes");
-    private Button btDivide = new Button("Ball");
+	private Button btFood = new Button("Food");
+	private Button btShower = new Button("Shower");
+	private Button btDeath = new Button("Death");
+    private Button btClothes = new Button("Clothes");
+    private Button btBall = new Button("Ball");
 
-	@Override // Override the start method in the Application class
+	@Override 
 	public void start(Stage primaryStage) {
-
 		HBox hBox1 = new HBox(5);
 		HBox hBox2 = new HBox(5);
 		VBox vBox = new VBox(15);
-		hBox1.getChildren().addAll(new Label("Number1: "), tfNumber1,
-			new Label("Number2: "), tfNumber2, new Label("Result: "), tfResult);
-		hBox2.getChildren().addAll(btAdd, btSubtract, btMultiply, btDivide);
+		hBox1.getChildren().addAll(btFood, btShower, btDeath, btClothes, btBall);
 		vBox.getChildren().addAll(hBox1, hBox2);
 
-		// Set UI properties
 		hBox1.setAlignment(Pos.CENTER);
 		hBox2.setAlignment(Pos.CENTER);
 		tfNumber1.setPrefColumnCount(4);
@@ -41,10 +37,11 @@ public class Bar extends Application {
 		vBox.setPadding(new Insets(2, 5, 0, 0));
 
 		// Process events
-		btAdd.setOnAction(e -> add());
-		btSubtract.setOnAction(e -> subtract());
-		btMultiply.setOnAction(e -> multiply());
-		btDivide.setOnAction(e -> divide());
+		btFood.setOnAction(e -> add());
+		btShower.setOnAction(e -> subtract());
+		btDeath.setOnAction(e -> multiply());
+		btClothes.setOnAction(e -> divide());
+		btBall.setOnAction(e -> divide());
 
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(vBox);
