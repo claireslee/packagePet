@@ -37,40 +37,40 @@ public class Bar extends Application {
 		vBox.setPadding(new Insets(2, 5, 0, 0));
 
 		// Process events
-		btFood.setOnAction(e -> add());
-		btShower.setOnAction(e -> subtract());
-		btDeath.setOnAction(e -> multiply());
-		btClothes.setOnAction(e -> divide());
-		btBall.setOnAction(e -> divide());
+		// btFood.setOnAction(e -> food());
+		// btShower.setOnAction(e -> shower());
+		// btDeath.setOnAction(e -> death());
+		// btClothes.setOnAction(e -> clothes());
+		// btBall.setOnAction(e -> ball());
 
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(vBox);
-		primaryStage.setTitle("Exercise_15_04"); // Set the stage title
-		primaryStage.setScene(scene); // Place the scene in the stage
-		primaryStage.show(); // Display the stage
+		primaryStage.setTitle("Package Pet");
+		primaryStage.setScene(scene); 
+		primaryStage.show(); 
 	}
 
-	// Add number1 to number2 
-	private void add() {
-		tfResult.setText(String.valueOf(Double.parseDouble(tfNumber1.getText()) +
-			Double.parseDouble(tfNumber2.getText())));
-	}
 
-	// Subtract number1 from number2 
-	private void subtract() {
-		tfResult.setText(String.valueOf(Double.parseDouble(tfNumber1.getText()) -
-			Double.parseDouble(tfNumber2.getText())));
-	}
+// 	// Button Functions
+// 	private void food() {
+// 		return 0;
+// 	}
 
-	// Mulitply number1 and number2
-	private void multiply() {
-		tfResult.setText(String.valueOf(Double.parseDouble(tfNumber1.getText()) *
-			Double.parseDouble(tfNumber2.getText())));
-	}
+// 	private void shower() {
+// 		return 0;
+// 	}
 
-	// Divide number 1 from number2
-	private void divide() {
-		tfResult.setText(String.valueOf(Double.parseDouble(tfNumber1.getText()) /
-			Double.parseDouble(tfNumber2.getText())));
-	}
+// 	private void death() {
+// 		return 0;
+// 	}
+
+// 	private void clothes() {
+// 		return 0;
+// 	}
+
+// 	private void ball() {
+// 		return 0;
+// 	}
 }
+
+
