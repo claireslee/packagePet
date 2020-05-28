@@ -19,7 +19,7 @@ public class background extends Application {
         HBox box = new HBox();
         box.getChildren().add(park);
         pane.getChildren().add(box);
-        pane.setMinSize(0, 0);
+        pane.setMinSize(1200, 650);
         park.fitWidthProperty().bind(pane.widthProperty());
         park.fitHeightProperty().bind(pane.heightProperty());
 		primaryStage.setTitle("Package Pet");
