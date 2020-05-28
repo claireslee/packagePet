@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
@@ -26,7 +27,9 @@ public class Bar extends Application {
 
 		HBox hBox1 = new HBox(10);
 		HBox hBox2 = new HBox(10);
+
 		VBox vBox = new VBox(20);
+		VBox vBox2 = new VBox(20);
 
 		hBox1.setAlignment(Pos.CENTER);
 		hBox2.setAlignment(Pos.CENTER);
@@ -35,6 +38,7 @@ public class Bar extends Application {
 		tfResult.setPrefColumnCount(4);
 		tfResult.setEditable(false);
 		vBox.setPadding(new Insets(2, 5, 0, 0));
+		vBox2.setPadding(new Insets(10, 15, 0, 0));
 
 		// Process events
 		// btFood.setOnAction(e -> food());
@@ -90,8 +94,16 @@ public class Bar extends Application {
 		});
 		
 		hBox1.getChildren().addAll(food);
+		hBox1.getChildren().addAll(clothes);
+		hBox1.getChildren().addAll(ball);
+		hBox1.getChildren().addAll(shower);
+		hBox1.getChildren().addAll(death);
+
 		vBox.getChildren().addAll(hBox1, hBox2);
-		vBox.getChildren().addAll(food, clothes, ball, shower, death);
+		vBox.getChildren().addAll(food);
+		vBox2.getChildren().addAll(clothes);
+	
+
 		((Group)scene.getRoot()).getChildren().add(vBox);
 
 		primaryStage.setScene(scene); 
