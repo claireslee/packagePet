@@ -13,7 +13,6 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 
-
 public class Bar extends Application {
 	private TextField tfNumber1 = new TextField();
 	private TextField tfNumber2 = new TextField();
@@ -46,16 +45,16 @@ public class Bar extends Application {
 	
 	// buttons as images
 	Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
-        Button food = new Button("food");
+        Button food = new Button("");
         food.setGraphic(new ImageView(image1));
         food.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                //
+				System.out.println("Accepted");
             }
         });
 	
 	Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
-		Button clothes = new Button("clothes");
+		Button clothes = new Button("");
         food.setGraphic(new ImageView(image2));
         food.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
@@ -63,8 +62,8 @@ public class Bar extends Application {
             }
 		});
 
-	Image image3 = new Image(getClass().getResourceAsStream("images/balicon.png"));
-		Button ball = new Button("ball");
+	Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
+		Button ball = new Button("");
         food.setGraphic(new ImageView(image3));
         food.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
@@ -73,7 +72,7 @@ public class Bar extends Application {
 		});
 		
 	Image image4 = new Image(getClass().getResourceAsStream("images/showericon.png"));
-		Button shower = new Button("shower");
+		Button shower = new Button("");
         food.setGraphic(new ImageView(image4));
         food.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
@@ -82,7 +81,7 @@ public class Bar extends Application {
 		});
 
 	Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));	
-		Button death = new Button("death");
+		Button death = new Button("");
         food.setGraphic(new ImageView(image5));
         food.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
@@ -97,6 +96,10 @@ public class Bar extends Application {
 
 		primaryStage.setScene(scene); 
 		primaryStage.show(); 
+	}
+
+	public static void main(String[] args) {
+		launch(args);
 	}
 
 // 	// Button Functions
@@ -119,9 +122,5 @@ public class Bar extends Application {
 // 	private void ball() {
 // 		return 0;
 // 	}
-
-	// public static void main(String[] args) {
-	// 	launch(args);
-	// }
 
 }
