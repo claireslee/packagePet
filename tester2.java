@@ -43,3 +43,14 @@ public class tester2 extends Application {
         stage.show();
     }
 }
+
+
+
+Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+		Button clothes = new Button("");
+        food.setGraphic(new ImageView(image2));
+        food.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                System.out.println("Accepted");
+            }
+		});
