@@ -15,12 +15,9 @@ import javafx.scene.Group;
 import javafx.scene.image.ImageView;
 
 public class Bar extends Application {
-	private TextField tfNumber1 = new TextField();
-	private TextField tfNumber2 = new TextField();
-    private TextField tfResult = new TextField();
 
 	@Override 
-	public void start(Stage primaryStage) {
+	public void start(Stage primaryStage) throws Exception {
 		// Create a scene and place it in the stage
 		Scene scene = new Scene(new Group());
 		primaryStage.setTitle("Package Pet");
@@ -28,36 +25,27 @@ public class Bar extends Application {
 		HBox hBox1 = new HBox(10);
 		HBox hBox2 = new HBox(10);
 
-		VBox vBox = new VBox(20);
-		VBox vBox2 = new VBox(20);
+		VBox vBox = new VBox();
+		VBox vBox2 = new VBox();
 
 		hBox1.setAlignment(Pos.CENTER);
 		hBox2.setAlignment(Pos.CENTER);
-		tfNumber1.setPrefColumnCount(4);
-		tfNumber2.setPrefColumnCount(4);
-		tfResult.setPrefColumnCount(4);
-		tfResult.setEditable(false);
+
 		vBox.setPadding(new Insets(2, 5, 0, 0));
 		vBox2.setPadding(new Insets(10, 15, 0, 0));
 
-		// Process events
-		// btFood.setOnAction(e -> food());
-		// btShower.setOnAction(e -> shower());
-		// btDeath.setOnAction(e -> death());
-		// btClothes.setOnAction(e -> clothes());
-		// btBall.setOnAction(e -> ball());
-	
+
 	// buttons as images
 	Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
         Button food = new Button("");
         food.setGraphic(new ImageView(image1));
-        food.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
+		food.setOnAction(new EventHandler<ActionEvent>() {
+			@Override public void handle(ActionEvent e) {
 				System.out.println("Accepted");
             }
         });
 	
-	Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+		Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
 		Button clothes = new Button("");
         food.setGraphic(new ImageView(image2));
         food.setOnAction(new EventHandler<ActionEvent>() {
@@ -92,7 +80,7 @@ public class Bar extends Application {
                 System.out.println("Accepted");
             }
 		});
-		
+
 		hBox1.getChildren().addAll(food);
 		hBox1.getChildren().addAll(clothes);
 		hBox1.getChildren().addAll(ball);
@@ -102,7 +90,6 @@ public class Bar extends Application {
 		vBox.getChildren().addAll(hBox1, hBox2);
 		vBox.getChildren().addAll(food);
 		vBox2.getChildren().addAll(clothes);
-	
 
 		((Group)scene.getRoot()).getChildren().add(vBox);
 
