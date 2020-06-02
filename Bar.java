@@ -1,6 +1,7 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -18,7 +19,8 @@ public class Bar extends Application {
 
 	@Override 
 	public void start(Stage primaryStage) throws Exception {
-		// Create a scene and place it in the stage
+		BorderPane bp = new BorderPane();
+
 		Scene scene = new Scene(new Group());
 		primaryStage.setTitle("Package Pet");
 
@@ -95,6 +97,8 @@ public class Bar extends Application {
 
 		primaryStage.setScene(scene); 
 		primaryStage.show(); 
+
+        bp.setBottom(vBox2); 
 	}
 
 	public static void main(String[] args) {
