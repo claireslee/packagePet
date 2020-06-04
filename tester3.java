@@ -1,78 +1,72 @@
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
-public class tester3 extends Application{
-    double num1 = 0;
-    double num2 = 0;
-    double answer = 0;
-
+ 
+public class Ex15_3 extends Application {
+    
     @Override
-    public void start(Stage primaryStage) throws Exception {
-
-        HBox numPane = new HBox();
-        numPane.setSpacing(10);
-        numPane.setAlignment(Pos.CENTER);
-
-
-        Label label1 = new Label("Number 1:");
-        TextField tf1 = new TextField();
-
-        Label label2 = new Label("Number 2:");
-        TextField tf2 = new TextField();
-
-        Label labelResult = new Label("Result :");
-        TextField tfResult = new TextField();
-
-        numPane.getChildren().addAll(label1, tf1,label2, tf2, labelResult, tfResult);
-
-		
-		Button add = new Button("Add");
-		Button subtract = new Button("subtract");
-		Button multiply = new Button("Multiply");
-		Button divide = new Button("Divide");
-		
-
-        add.setOnAction(e -> {answer = Double.parseDouble(tf1.getText()) + Double.parseDouble(tf2.getText());
-            tfResult.setText(answer + "");
-        });
-
-        subtract.setOnAction(e -> {answer = Double.parseDouble(tf1.getText()) - Double.parseDouble(tf2.getText());
-            tfResult.setText(answer + "");
-        });
+    public void start(Stage primaryStage) {
+       
+        BorderPane pp = new BorderPane();
+        Pane pane = new Pane();
+        Rectangle rect = new Rectangle(50,100,50,100);
+        pane.getChildren().add(rect);
+ 
+        Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
+        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+        Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
+        Image image4 = new Image(getClass().getResourceAsStream("images/showericon.png"));
+        Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));   
         
-        multiply.setOnAction(e -> {answer = Double.parseDouble(tf1.getText()) * Double.parseDouble(tf2.getText());
-            tfResult.setText(answer + "");
+        HBox box = new HBox();
+        Button death = new Button("left");
+ 
+        Button clothes = new Button("right");
+ 
+        Button shower = new Button("up");
+ 
+        Button food = new Button("down");
+        Button ball = new Button("down");
+
+        box.getChildren().add(death);
+        box.getChildren().add(clothes);
+        box.getChildren().add(shower);
+        box.getChildren().add(food);
+        box.getChildren().add(ball);
+        box.setSpacing(20); 
+        box.setAlignment(Pos.CENTER);
+ 
+        left.setOnAction(e->{
+            rect.setX(rect.getX() - 15);
         });
+       
+        right.setOnAction(e->{
+            rect.setX(rect.getX() + 15);
+        });
+       
         
-        divide.setOnAction(e -> {answer = Double.parseDouble(tf1.getText()) / Double.parseDouble(tf2.getText());
-            tfResult.setText(answer + "");
+        up.setOnAction(e->{
+            rect.setY(rect.getY() - 15);
         });
-
-
-        HBox operatorsPane = new HBox();
-        operatorsPane.setSpacing(10);
-        operatorsPane.setAlignment(Pos.CENTER);
-        operatorsPane.getChildren().addAll(add, subtract, multiply, divide);
-
-        BorderPane borderPane = new BorderPane(numPane);
-        BorderPane.setMargin(numPane, new Insets(10, 10, 10, 10));
-
-        borderPane.setBottom(operatorsPane);
-        BorderPane.setMargin(operatorsPane, new Insets(10, 10, 10, 10));
-        primaryStage.setScene(new Scene(borderPane, borderPane.getPrefWidth(),borderPane.getPrefWidth()));
-        primaryStage.setTitle("Calculator - Ex15_4");
+       
+        down.setOnAction(e->{
+            rect.setY(rect.getY() + 15);
+ 
+        });
+ 
+        pp.setCenter(pane);
+        pp.setBottom(box);
+        
+        Scene scene = new Scene(pp);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Exercise 15_3");
         primaryStage.show();
     }
-
-    public static void main(String[] args) {
-        Application.launch(args);
-	}
 }
