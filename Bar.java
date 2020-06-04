@@ -24,14 +24,12 @@ public class Bar extends Application {
         Scene scene = new Scene(new Group());
         primaryStage.setTitle("Package Pet");
  
-        HBox hBox1 = new HBox(10);
-        HBox hBox2 = new HBox(10);
+        HBox hBox = new HBox(10);
  
         VBox vBox = new VBox();
         VBox vBox2 = new VBox();
  
-        hBox1.setAlignment(Pos.CENTER);
-        hBox2.setAlignment(Pos.CENTER);
+        hBox.setAlignment(Pos.CENTER);
  
         vBox.setPadding(new Insets(20, 50, 0, 0));
         vBox2.setPadding(new Insets(50, 75, 0, 0));
@@ -83,22 +81,18 @@ public class Bar extends Application {
             }
         });
  
-        hBox1.getChildren().addAll(food);
-        hBox1.getChildren().addAll(clothes);
-        hBox1.getChildren().addAll(ball);
-        hBox1.getChildren().addAll(shower);
-        hBox1.getChildren().addAll(death);
+        hBox.getChildren().addAll(food);
+        hBox.getChildren().addAll(clothes);
+        hBox.getChildren().addAll(ball);
+        hBox.getChildren().addAll(shower);
+        hBox.getChildren().addAll(death);
  
-        vBox.getChildren().addAll(hBox1, hBox2);
-        vBox.getChildren().addAll(food);
-        vBox2.getChildren().addAll(clothes);
+        vBox.getChildren().addAll(hBox);
  
         ((Group)scene.getRoot()).getChildren().add(vBox);
  
         primaryStage.setScene(scene); 
 		primaryStage.show(); 
- 
-        bp.setBottom(vBox2); 
     }
  
     public static void main(String[] args) {
