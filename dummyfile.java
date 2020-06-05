@@ -5,7 +5,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -13,7 +15,8 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class dummyfile extends Application {
-    double x = 70;
+    double x = 300;
+    double y = 300;
 @Override // Override the start method in the Application class
 public void start(Stage primaryStage) {
 StackPane pane = new StackPane();
@@ -24,11 +27,31 @@ r1.setStroke(Color.BLACK);
 r1.setFill(Color.BLACK);
 
 
-Rectangle r3 = new Rectangle(40, 70);
+Rectangle r3 = new Rectangle(40, 300);
 r3.setStroke(Color.BLACK);
 r3.setFill(Color.WHITE);
 
-pane.getChildren().addAll(r3, r1);
+Rectangle r4 = new Rectangle(40, y);
+r4.setStroke(Color.BLACK);
+r4.setFill(Color.BLACK);
+
+
+Rectangle r5 = new Rectangle(40, 300);
+r5.setStroke(Color.BLACK);
+r5.setFill(Color.WHITE);
+
+Label l1 = new Label("Hunger");
+Label l2 = new Label("Cleanliness");
+
+pane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
+StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
+StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
+
+StackPane.setAlignment(r4, Pos.BOTTOM_RIGHT);
+StackPane.setAlignment(r5, Pos.BOTTOM_RIGHT);
+
+StackPane.setAlignment(l1, Pos.CENTER_LEFT);
+StackPane.setAlignment(l2, Pos.CENTER_RIGHT);
 
 // Create a handler for changing text
 EventHandler<ActionEvent> eventHandler = e -> {
@@ -41,6 +64,15 @@ else {
 x-=10;
 r1.setHeight(x);
 } //15
+if (r4.getHeight() != 0) {
+     y-=15;
+    r4.setHeight(y);
+    } 
+    else {
+     y-=15;
+    r4.setHeight(y);
+    } //15
+
 };
 
 // Create an animation for alternating text
