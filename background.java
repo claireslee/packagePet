@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
  
@@ -27,6 +28,7 @@ public class background extends Application {
         ImageView park = new ImageView();
         park.setImage(bg);
  
+        
         Pane pane = new Pane();
         HBox box = new HBox();
         box.getChildren().add(park);
