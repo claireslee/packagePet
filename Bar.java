@@ -19,9 +19,9 @@ public class Bar extends Application {
  
     @Override 
     public void start(Stage primaryStage) throws Exception {
-		BorderPane bp = new BorderPane();
+        BorderPane bp = new BorderPane();
  
-        Scene scene = new Scene(new Group());
+        Scene scene = new Scene(bp);
         primaryStage.setTitle("Package Pet");
  
         HBox hBox = new HBox(10);
@@ -33,9 +33,9 @@ public class Bar extends Application {
  
         vBox.setPadding(new Insets(20, 50, 0, 0));
         vBox2.setPadding(new Insets(50, 75, 0, 0));
- 
- 
-    // buttons as images
+        vBox.setAlignment(Pos.BOTTOM_CENTER);
+        vBox2.setAlignment(Pos.BOTTOM_CENTER);
+
     Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
         Button food = new Button("");
         food.setGraphic(new ImageView(image1));
@@ -87,37 +87,14 @@ public class Bar extends Application {
         hBox.getChildren().addAll(shower);
         hBox.getChildren().addAll(death);
  
-        vBox.getChildren().addAll(hBox);
- 
-        ((Group)scene.getRoot()).getChildren().add(vBox);
- 
+        bp.setCenter(vBox);
+        bp.setBottom(hBox);
+
         primaryStage.setScene(scene); 
-		primaryStage.show(); 
+        primaryStage.show(); 
     }
  
     public static void main(String[] args) {
         launch(args);
     }
- 
-//  // Button Functions
-//  private void food() {
-//      return 0;
-//  }
- 
-//  private void shower() {
-//      return 0;
-//  }
- 
-//  private void death() {
-//      return 0;
-//  }
- 
-//  private void clothes() {
-//      return 0;
-//  }
- 
-//  private void ball() {
-//      return 0;
-//  }
- 
 }
