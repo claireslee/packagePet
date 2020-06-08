@@ -28,22 +28,6 @@ import javafx.scene.Group;
 public class background extends Application {
     double x = 300;
     double y = 300;
-<<<<<<< HEAD
-=======
-@Override // Override the start method in the Application class
-public void start(Stage primaryStage) {
-StackPane sPane = new StackPane();
- // Place text into the stack pane
-Image bg = new Image("images/backgroundimage.jpg");
-ImageView park = new ImageView();
-park.setImage(bg);
-
-Pane pane = new Pane();
-HBox box = new HBox();
-box.getChildren().add(park);
-pane.getChildren().add(box);
-        
->>>>>>> 28c6b080c748c437ae1002870d115b86d514c31a
 
     @Override 
     public void start(Stage primaryStage) {
