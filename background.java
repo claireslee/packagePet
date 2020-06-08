@@ -109,7 +109,7 @@ animation.pause();
 
 // Create a scene and place it in the stage
 Scene scene = new Scene(sPane);
-primaryStage.setTitle("TimelineDemo"); // Set the stage title
+primaryStage.setTitle("Package Pet"); // Set the stage title
 primaryStage.setScene(scene);
 pane.setMinSize(1200, 650);
 park.fitWidthProperty().bind(pane.widthProperty());
