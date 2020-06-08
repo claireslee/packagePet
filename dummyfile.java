@@ -13,14 +13,29 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import javafx.application.Application;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.scene.layout.HBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class dummyfile extends Application {
     double x = 300;
     double y = 300;
 @Override // Override the start method in the Application class
 public void start(Stage primaryStage) {
-StackPane pane = new StackPane();
+StackPane sPane = new StackPane();
  // Place text into the stack pane
+Image bg = new Image("images/backgroundpic.jpg");
+ImageView park = new ImageView();
+park.setImage(bg);
+
+Pane pane = new Pane();
+HBox box = new HBox();
+box.getChildren().add(park);
+pane.getChildren().add(box);
+        
 
 Rectangle r1 = new Rectangle(40, x);
 r1.setStroke(Color.BLACK);
@@ -43,7 +58,8 @@ r5.setFill(Color.WHITE);
 Label l1 = new Label("Hunger");
 Label l2 = new Label("Cleanliness");
 
-pane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
+sPane.getChildren().addAll(pane);
+sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
 StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
 StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
 
@@ -82,7 +98,7 @@ animation.setCycleCount(Timeline.INDEFINITE);
 animation.play(); // Start animation
 
 // Pause and resume animation
-pane.setOnMouseClicked(e -> {
+sPane.setOnMouseClicked(e -> {
 if (animation.getStatus() == Animation.Status.PAUSED) {
 animation.play();
 }
@@ -92,9 +108,14 @@ animation.pause();
 });
 
 // Create a scene and place it in the stage
-Scene scene = new Scene(pane, 250, 250);
+Scene scene = new Scene(sPane);
 primaryStage.setTitle("TimelineDemo"); // Set the stage title
-primaryStage.setScene(scene); // Place the scene in the stage
+primaryStage.setScene(scene);
+pane.setMinSize(1200, 650);
+park.fitWidthProperty().bind(pane.widthProperty());
+park.fitHeightProperty().bind(pane.heightProperty()); // Place the scene in the stage
 primaryStage.show(); // Display the stage
+
+		
 }
 }
