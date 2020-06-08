@@ -27,7 +27,7 @@ public class background extends Application {
 public void start(Stage primaryStage) {
 StackPane sPane = new StackPane();
  // Place text into the stack pane
-Image bg = new Image("images/backgroundpic.jpg");
+Image bg = new Image("images/backgroundimage.jpg");
 ImageView park = new ImageView();
 park.setImage(bg);
 
