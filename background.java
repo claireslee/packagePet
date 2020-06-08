@@ -32,11 +32,9 @@ public class background extends Application {
         box.getChildren().add(park);
         pane.getChildren().add(box);
         
- 
         Rectangle r1 = new Rectangle(40, x);
         r1.setStroke(Color.BLACK);
         r1.setFill(Color.BLACK);
- 
  
         Rectangle r3 = new Rectangle(40, 300);
         r3.setStroke(Color.BLACK);
