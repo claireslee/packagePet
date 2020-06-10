@@ -29,6 +29,7 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 public class background extends Application {
    double x = 300;
@@ -38,9 +39,8 @@ public class background extends Application {
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
-       Image dog = new Image("images/dog.png");
-       ImageView pet = new ImageView();
-       pet.setImage(dog);
+    //    ImageView pet = new ImageView();
+    //    pet.setImage(dog);
        ImageView park = new ImageView();
        park.setImage(bg);
       
@@ -56,9 +56,27 @@ public class background extends Application {
        hBox.setAlignment(Pos.BOTTOM_CENTER);
        // vBox.setPadding(new Insets(20, 50, 0, 0));
        // vBox.setAlignment(Pos.BOTTOM_CENTER);
-       GridPane gpane = new GridPane();
-       gpane.getChildren().add(pet);
-      
+    //     @FXML
+    //     private void doggie(ActionEvent event) throws Exception {
+    //         GridPane gpane = new GridPane();
+    //         gpane.getChildren().add(pet);
+    //         Node source = (Node)event.getSource();
+    //         Integer colIndex = GridPane.getColumnIndex(source);
+    //         Integer rowIndex = GridPane.getRowIndex(source);
+    //         GridPane.setConstraints(pet, colIndex, rowIndex);
+    //    }
+
+        GridPane gpane = new GridPane();
+        //gpane.getChildren().add(pet);
+        // gpane.setPadding(new Insets(10, 10, 10, 10));
+        gpane.setAlignment(Pos.CENTER);
+        gpane.setHgap(5);
+        gpane.setVgap(5);
+        ImageView dog = new ImageView("images/dog.png");
+        gpane.add(dog, 1, 1);
+
+        // gpane.addAll(dog,9, 6);
+             
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
        r1.setFill(Color.BLACK);
@@ -98,12 +116,12 @@ public class background extends Application {
            }
           
            if (r4.getHeight() != 0) {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
   
            else {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
        };
