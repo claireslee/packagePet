@@ -38,22 +38,26 @@ public class background extends Application {
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
+       Image dog = new Image("images/dog.png");
+       ImageView pet = new ImageView();
+       pet.setImage(dog);
        ImageView park = new ImageView();
        park.setImage(bg);
       
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
-       VBox vBox = new VBox();
+       // VBox vBox = new VBox();
 
        sPane.getChildren().add(park);
        sPane.getChildren().add(bp);
+       
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
-       vBox.setPadding(new Insets(20, 50, 0, 0));
-       vBox.setAlignment(Pos.BOTTOM_CENTER);
-    
- 
+       // vBox.setPadding(new Insets(20, 50, 0, 0));
+       // vBox.setAlignment(Pos.BOTTOM_CENTER);
+       GridPane gpane = new GridPane();
+       gpane.getChildren().add(pet);
       
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
@@ -171,7 +175,7 @@ public class background extends Application {
        hBox.getChildren().addAll(death);
  
        StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
-       bp.setCenter(vBox);
+       bp.setCenter(gpane);
        bp.setBottom(hBox);
  
  
