@@ -42,23 +42,18 @@ public class background extends Application {
        park.setImage(bg);
       
        Pane pane = new Pane();
-       HBox box = new HBox();
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
        VBox vBox = new VBox();
-       VBox vBox2 = new VBox();
-       box.getChildren().add(park);
-       pane.getChildren().add(box);
-       pane.getChildren().add(bp);
-       pane.getChildren().addAll(hBox, vBox, vBox2);
- 
+
+       sPane.getChildren().add(park);
+       sPane.getChildren().add(bp);
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
        vBox.setPadding(new Insets(20, 50, 0, 0));
-       vBox2.setPadding(new Insets(50, 75, 0, 0));
        vBox.setAlignment(Pos.BOTTOM_CENTER);
-       vBox2.setAlignment(Pos.BOTTOM_CENTER);
+    
  
       
        Rectangle r1 = new Rectangle(40, x);
@@ -177,7 +172,7 @@ public class background extends Application {
        hBox.getChildren().addAll(shower);
        hBox.getChildren().addAll(death);
  
-       StackPane.setAlignment(hBox, Pos.BOTTOM_CENTER);
+       StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
        bp.setCenter(vBox);
        bp.setBottom(hBox);
  
