@@ -41,17 +41,24 @@ public class background extends Application {
        ImageView park = new ImageView();
        park.setImage(bg);
       
+       Pane pane = new Pane();
        HBox box = new HBox();
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
+       VBox vBox = new VBox();
+       VBox vBox2 = new VBox();
        box.getChildren().add(park);
-       sPane.getChildren().add(box);
-       sPane.getChildren().add(bp);
-       sPane.getChildren().add(hBox);
+       pane.getChildren().add(box);
+       pane.getChildren().add(bp);
+       pane.getChildren().addAll(hBox, vBox, vBox2);
  
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
+       vBox.setPadding(new Insets(20, 50, 0, 0));
+       vBox2.setPadding(new Insets(50, 75, 0, 0));
+       vBox.setAlignment(Pos.BOTTOM_CENTER);
+       vBox2.setAlignment(Pos.BOTTOM_CENTER);
  
       
        Rectangle r1 = new Rectangle(40, x);
@@ -72,7 +79,7 @@ public class background extends Application {
        Label l1 = new Label("Hunger");
        Label l2 = new Label("Cleanliness");
       
-       sPane.getChildren().addAll(bp);
+       sPane.getChildren().addAll(pane);
        sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
        StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
        StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
@@ -125,8 +132,8 @@ public class background extends Application {
        food.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
-            }
-        });
+           }
+       });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
        Button clothes = new Button("");
@@ -134,16 +141,16 @@ public class background extends Application {
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
-            }
-        });
+           }
+       });
    Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
        Button ball = new Button("");
        ball.setGraphic(new ImageView(image3));
        ball.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
-            }
-        });
+           }
+       });
       
    Image image4 = new Image(getClass().getResourceAsStream("images/showericon.png"));
        Button shower = new Button("");
@@ -151,16 +158,16 @@ public class background extends Application {
        shower.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
-            }
-        });
+           }
+       });
    Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));  
        Button death = new Button("");
        death.setGraphic(new ImageView(image5));
        death.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
-            }
-        });
+           }
+       });
       
  
       
@@ -170,6 +177,8 @@ public class background extends Application {
        hBox.getChildren().addAll(shower);
        hBox.getChildren().addAll(death);
  
+       StackPane.setAlignment(hBox, Pos.BOTTOM_CENTER);
+       bp.setCenter(vBox);
        bp.setBottom(hBox);
  
  
@@ -177,10 +186,9 @@ public class background extends Application {
        Scene scene = new Scene(sPane);
        primaryStage.setTitle("Package Pet"); // Set the stage title
        primaryStage.setScene(scene);
-       sPane.setMinSize(1200, 650);
-       park.fitWidthProperty().bind(sPane.widthProperty());
-       park.fitHeightProperty().bind(sPane.heightProperty()); // Place the scene in the stage
+       pane.setMinSize(1200, 650);
+       park.fitWidthProperty().bind(pane.widthProperty());
+       park.fitHeightProperty().bind(pane.heightProperty()); // Place the scene in the stage
        primaryStage.show(); // Display the stage
    }
 }
-
