@@ -41,7 +41,6 @@ public class background extends Application {
        ImageView park = new ImageView();
        park.setImage(bg);
       
-       Pane pane = new Pane();
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
@@ -74,7 +73,6 @@ public class background extends Application {
        Label l1 = new Label("Hunger");
        Label l2 = new Label("Cleanliness");
       
-       sPane.getChildren().addAll(pane);
        sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
        StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
        StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
@@ -181,9 +179,9 @@ public class background extends Application {
        Scene scene = new Scene(sPane);
        primaryStage.setTitle("Package Pet"); // Set the stage title
        primaryStage.setScene(scene);
-       pane.setMinSize(1200, 650);
-       park.fitWidthProperty().bind(pane.widthProperty());
-       park.fitHeightProperty().bind(pane.heightProperty()); // Place the scene in the stage
+       bp.setMinSize(1200, 650);
+       park.fitWidthProperty().bind(bp.widthProperty());
+       park.fitHeightProperty().bind(bp.heightProperty()); // Place the scene in the stage
        primaryStage.show(); // Display the stage
    }
 }
