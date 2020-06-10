@@ -30,7 +30,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.image.ImageView;
-public class background extends Application {
+public class clothesButton extends Application {
    double x = 300;
    double y = 300;
   
@@ -42,18 +42,23 @@ public class background extends Application {
        park.setImage(bg);
       
        Pane pane = new Pane();
+       HBox box = new HBox();
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
        VBox vBox = new VBox();
-
-       sPane.getChildren().add(park);
-       sPane.getChildren().add(bp);
+       VBox vBox2 = new VBox();
+       box.getChildren().add(park);
+       pane.getChildren().add(box);
+       pane.getChildren().add(bp);
+       pane.getChildren().addAll(hBox, vBox, vBox2);
+ 
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
        vBox.setPadding(new Insets(20, 50, 0, 0));
+       vBox2.setPadding(new Insets(50, 75, 0, 0));
        vBox.setAlignment(Pos.BOTTOM_CENTER);
-    
+       vBox2.setAlignment(Pos.BOTTOM_CENTER);
  
       
        Rectangle r1 = new Rectangle(40, x);
@@ -131,11 +136,64 @@ public class background extends Application {
        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+       Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
+       Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
+       Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
+       Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
+       Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpgg")); 
+       Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
+       Image glasses = new Image(getClass().getResourceAsStream("images/glasses.png")); 
+       Image headband2 = new Image(getClass().getResourceAsStream("images/headband.png")); 
+       Image necklace1 = new Image(getClass().getResourceAsStream("images/heartnecklace.jpg")); 
+       Image necklace2 = new Image(getClass().getResourceAsStream("images/pearlnecklace.jpg")); 
+       Image scarf = new Image(getClass().getResourceAsStream("images/scarf.jpg")); 
+       Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
+       Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
+       Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
+       Image dogglasseshat = new Image(getClass().getResourceAsStream("images/dog-glasses,hat.png"));
+       Image dogglassesneck = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace.png")); 
+       Image dogglassesneckhat = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace,hat.png")); 
+       Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
+       Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png")); 
+       Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
+       Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
        Button clothes = new Button("");
        clothes.setGraphic(new ImageView(image2));
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               System.out.println("Accepted");
+               Rectangle cBox = new Rectangle();
+               Button hatone = new Button("");
+               hatone.setGraphic(new ImageView(hat1));
+               Button hattwo = new Button("");
+               hattwo.setGraphic(new ImageView(hat2));
+               Button hatthree = new Button("");
+               hatthree.setGraphic(new ImageView(hat3));
+               Button hatfour = new Button("");
+               hatfour.setGraphic(new ImageView(hat4));
+               Button necklaceone = new Button("");
+               necklaceone.setGraphic(new ImageView(necklace1));
+               Button necklacetwo = new Button("");
+               necklacetwo.setGraphic(new ImageView(necklace2));
+               Button headbandone = new Button("");
+               headbandone.setGraphic(new ImageView(headband1));
+               Button headbandtwo = new Button("");
+               headbandtwo.setGraphic(new ImageView(headband2));
+               Button glassesone = new Button("");
+               glassesone.setGraphic(new ImageView(glasses));
+               Button sunglassesone = new Button("");
+               sunglassesone.setGraphic(new ImageView(sunglasses));
+               Button tieone = new Button("");
+               tieone.setGraphic(new ImageView(tie));
+               Button bowtieone = new Button("");
+               bowtieone.setGraphic(new ImageView(bowtie));
+               Button bowone = new Button("");
+               bowone.setGraphic(new ImageView(bow));
+               Button scarfone = new Button("");
+               scarfone.setGraphic(new ImageView(scarf));
+               GridPane p = new GridPane();
+               p.getChildren().addAll(cBox, scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
+
+               
            }
        });
    Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
@@ -172,7 +230,7 @@ public class background extends Application {
        hBox.getChildren().addAll(shower);
        hBox.getChildren().addAll(death);
  
-       StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
+       StackPane.setAlignment(hBox, Pos.BOTTOM_CENTER);
        bp.setCenter(vBox);
        bp.setBottom(hBox);
  
