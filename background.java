@@ -72,7 +72,7 @@ public class background extends Application {
         gpane.setAlignment(Pos.CENTER);
         gpane.setHgap(5);
         gpane.setVgap(5);
-        ImageView dog = new ImageView("images/dog.png");
+        ImageView dog = new ImageView("images/dog-glasses.png");
         gpane.add(dog, 1, 1);
 
         // gpane.addAll(dog,9, 6);
@@ -87,7 +87,6 @@ public class background extends Application {
        Rectangle r4 = new Rectangle(40, y);
        r4.setStroke(Color.BLACK);
        r4.setFill(Color.BLACK);
-      
       
        Rectangle r5 = new Rectangle(40, 300);
        r5.setStroke(Color.BLACK);
