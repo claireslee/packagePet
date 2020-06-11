@@ -18,6 +18,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -29,6 +30,7 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 public class food extends Application {
    double x = 300;
@@ -38,23 +40,48 @@ public class food extends Application {
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
+    //    ImageView pet = new ImageView();
+    //    pet.setImage(dog);
        ImageView park = new ImageView();
        park.setImage(bg);
       
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
-       VBox vBox = new VBox();
+       // VBox vBox = new VBox();
 
        sPane.getChildren().add(park);
        sPane.getChildren().add(bp);
+       
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
-       vBox.setPadding(new Insets(20, 50, 0, 0));
-       vBox.setAlignment(Pos.BOTTOM_CENTER);
-    
+       // vBox.setPadding(new Insets(20, 50, 0, 0));
+       // vBox.setAlignment(Pos.BOTTOM_CENTER);
+    //     @FXML
+    //     private void doggie(ActionEvent event) throws Exception {
+    //         GridPane gpane = new GridPane();
+    //         gpane.getChildren().add(pet);
+    //         Node source = (Node)event.getSource();
+    //         Integer colIndex = GridPane.getColumnIndex(source);
+    //         Integer rowIndex = GridPane.getRowIndex(source);
+    //         GridPane.setConstraints(pet, colIndex, rowIndex);
+    //    }
+
+        GridPane gpane = new GridPane();
+        //gpane.getChildren().add(pet);
+        //gpane.setPadding(new Insets(100, 100, 100, 100));
+        gpane.setAlignment(Pos.CENTER);
+        gpane.getColumnConstraints().add(new ColumnConstraints(100));
+        gpane.getColumnConstraints().add(new ColumnConstraints(300));
+        gpane.setHgap(5);
+        gpane.setVgap(10);
+        ImageView dog = new ImageView("images/dog.png");
+        gpane.add(dog, 1, 1);
+        GridPane.setRowIndex(dog, 1);
+        GridPane.setColumnIndex(dog, 1);
+
+        // gpane.addAll(dog,9, 6);
  
-      
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
        r1.setFill(Color.BLACK);
@@ -65,7 +92,6 @@ public class food extends Application {
        Rectangle r4 = new Rectangle(40, y);
        r4.setStroke(Color.BLACK);
        r4.setFill(Color.BLACK);
-      
       
        Rectangle r5 = new Rectangle(40, 300);
        r5.setStroke(Color.BLACK);
@@ -94,12 +120,12 @@ public class food extends Application {
            }
           
            if (r4.getHeight() != 0) {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
   
            else {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
        };
@@ -127,6 +153,9 @@ public class food extends Application {
                 Image doggyfood = new Image("images/doggyfood.png");
                 ImageView bowl = new ImageView();
                 bowl.setImage(doggyfood);
+                gpane.add(bowl, 1, 10);
+                // gpane.setRowIndex(dog, 1);
+                // gpane.setColumnIndex(dog, 1);
        }
        });
   
@@ -173,7 +202,7 @@ public class food extends Application {
        hBox.getChildren().addAll(death);
  
        StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
-       bp.setCenter(vBox);
+       bp.setCenter(gpane);
        bp.setBottom(hBox);
  
  
