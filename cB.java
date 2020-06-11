@@ -34,6 +34,9 @@ import javafx.scene.image.ImageView;
 public class cB extends Application {
    double x = 300;
    double y = 300;
+   boolean hatPressed = false;
+   boolean necklacePressed = false;
+   boolean glassesPressed = false;
   
    @Override // Override the start method in the Application class
        public void start(Stage primaryStage) {
@@ -204,7 +207,9 @@ public class cB extends Application {
                         cBox.getChildren().remove(hatthree);
                         
                         gpane.getChildren().remove(dog);
-                         gpane.add(doghat, 1, 1);
+                        gpane.add(doghat, 1, 1);
+
+                        
                     }
                 });
                 
@@ -223,6 +228,10 @@ public class cB extends Application {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
                     cBox.getChildren().remove(necklacetwo);
+                    gpane.getChildren().remove(dog);
+                    gpane.add(dogneck, 1, 1);
+
+
                 }
             });
             //    Button headbandone = new Button("");
@@ -235,6 +244,8 @@ public class cB extends Application {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
                     cBox.getChildren().remove(glassesone);
+                    gpane.getChildren().remove(dog);
+                    gpane.add(dogglasses, 1, 1);
                 }
             });
 
@@ -246,9 +257,12 @@ public class cB extends Application {
             reset.setOnAction(new EventHandler<ActionEvent>() {
              @Override public void handle(ActionEvent e) {
                  System.out.println("Accepted");
-                 cBox.getChildren().addAll(glassesone, hatthree, necklacetwo);
-                 gpane.getChildren().remove(doghat);
+            
+                 gpane.getChildren().removeAll(doghat, dogneck, dogglasses);
                       gpane.add(dog, 1, 1);
+
+                cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo);
+                cBox.getChildren().addAll(glassesone, hatthree, necklacetwo);
                 
 
                 } 
@@ -285,6 +299,8 @@ public class cB extends Application {
             //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
                 cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit, reset);
                 hBox.getChildren().add(cBox);
+
+                bp.setTop(cBox);
                
 
            }
