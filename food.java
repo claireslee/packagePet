@@ -154,6 +154,8 @@ public class food extends Application {
                 ImageView bowl = new ImageView();
                 bowl.setImage(doggyfood);
                 gpane.add(bowl, 1, 10);
+                // gpane.setRowIndex(dog, 1);
+                // gpane.setColumnIndex(dog, 1);
        }
        });
   
