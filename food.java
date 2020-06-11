@@ -78,8 +78,10 @@ public class food extends Application {
         gpane.setVgap(10);
         ImageView dog = new ImageView("images/dog.png");
         gpane.add(dog, 1, 1);
-        GridPane.setRowIndex(dog, 1);
-        GridPane.setColumnIndex(dog, 1);
+        ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
+        ColumnConstraints column2 = new ColumnConstraints(100,100,Double.MAX_VALUE);
+        ColumnConstraints column3 = new ColumnConstraints(100,100,Double.MAX_VALUE);
+        gpane.getColumnConstraints().addAll(column1, column2, column3);
 
         // gpane.addAll(dog,9, 6);
  

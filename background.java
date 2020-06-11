@@ -74,6 +74,7 @@ public class background extends Application {
         gpane.setVgap(5);
         ImageView dog = new ImageView("images/dog.png");
         gpane.add(dog, 1, 1);
+        
 
         // gpane.addAll(dog,9, 6);
  
