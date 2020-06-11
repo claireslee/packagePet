@@ -29,8 +29,9 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-public class clothesButton extends Application {
+public class cB extends Application {
    double x = 300;
    double y = 300;
   
@@ -38,29 +39,44 @@ public class clothesButton extends Application {
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
+    //    ImageView pet = new ImageView();
+    //    pet.setImage(dog);
        ImageView park = new ImageView();
        park.setImage(bg);
       
-       Pane pane = new Pane();
-       HBox box = new HBox();
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
-       VBox vBox = new VBox();
-       VBox vBox2 = new VBox();
-       box.getChildren().add(park);
-       pane.getChildren().add(box);
-       pane.getChildren().add(bp);
-       pane.getChildren().addAll(hBox, vBox, vBox2);
- 
+       // VBox vBox = new VBox();
+
+       sPane.getChildren().add(park);
+       sPane.getChildren().add(bp);
+       
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
-       vBox.setPadding(new Insets(20, 50, 0, 0));
-       vBox2.setPadding(new Insets(50, 75, 0, 0));
-       vBox.setAlignment(Pos.BOTTOM_CENTER);
-       vBox2.setAlignment(Pos.BOTTOM_CENTER);
+       // vBox.setPadding(new Insets(20, 50, 0, 0));
+       // vBox.setAlignment(Pos.BOTTOM_CENTER);
+    //     @FXML
+    //     private void doggie(ActionEvent event) throws Exception {
+    //         GridPane gpane = new GridPane();
+    //         gpane.getChildren().add(pet);
+    //         Node source = (Node)event.getSource();
+    //         Integer colIndex = GridPane.getColumnIndex(source);
+    //         Integer rowIndex = GridPane.getRowIndex(source);
+    //         GridPane.setConstraints(pet, colIndex, rowIndex);
+    //    }
+
+        GridPane gpane = new GridPane();
+        //gpane.getChildren().add(pet);
+        // gpane.setPadding(new Insets(10, 10, 10, 10));
+        gpane.setAlignment(Pos.CENTER);
+        gpane.setHgap(5);
+        gpane.setVgap(5);
+        ImageView dog = new ImageView("images/dog.png");
+        gpane.add(dog, 1, 1);
+
+        // gpane.addAll(dog,9, 6);
  
-      
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
        r1.setFill(Color.BLACK);
@@ -72,14 +88,12 @@ public class clothesButton extends Application {
        r4.setStroke(Color.BLACK);
        r4.setFill(Color.BLACK);
       
-      
        Rectangle r5 = new Rectangle(40, 300);
        r5.setStroke(Color.BLACK);
        r5.setFill(Color.WHITE);
        Label l1 = new Label("Hunger");
        Label l2 = new Label("Cleanliness");
       
-       sPane.getChildren().addAll(pane);
        sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
        StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
        StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
@@ -101,12 +115,12 @@ public class clothesButton extends Application {
            }
           
            if (r4.getHeight() != 0) {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
   
            else {
-               y-=15;
+               y-=5;
                r4.setHeight(y);
            }
        };
@@ -136,7 +150,7 @@ public class clothesButton extends Application {
        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
-    //Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
+       //Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
     //  Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
     //    Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
     //    Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
@@ -150,18 +164,27 @@ public class clothesButton extends Application {
     //    Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
     //    Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
      //Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
-       Image dogglasseshat = new Image(getClass().getResourceAsStream("images/dog-glasses,hat.png"));
-       Image dogglassesneck = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace.png")); 
-       Image dogglassesneckhat = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace,hat.png")); 
-       Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
-       Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png")); 
-       Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
-       Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
+    //    Image dogglasseshat = new Image(getClass().getResourceAsStream("images/dog-glasses,hat.png"));
+    //    Image dogglassesneck = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace.png")); 
+    //    Image dogglassesneckhat = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace,hat.png")); 
+    //    Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
+    //    Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png"));
+        ImageView doghat = new ImageView("images/dog-hat.png");
+        ImageView dogglasseshat = new ImageView("images/dog-glasses,hat.png");
+        ImageView dogglassesneck = new ImageView("images/dog-glasses,necklace.png");
+        ImageView dogglassesneckhat = new ImageView("images/dog-glasses,necklace,hat.png");
+        ImageView dogglasses = new ImageView("images/dog-glasses.png");
+        ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
+        ImageView dogneck = new ImageView("images/dog-necklace.png");
+        Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
+        
+    //    Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
+    //    Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
        Button clothes = new Button("");
        clothes.setGraphic(new ImageView(image2));
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               HBox cBox = new HBox();
+            HBox cBox = new HBox();
             // Button hatone = new Button("");
             // hatone.setGraphic(new ImageView(hat1));
             // hatone.setOnAction(new EventHandler<ActionEvent>() {
@@ -178,6 +201,9 @@ public class clothesButton extends Application {
                     @Override public void handle(ActionEvent e) {
                         System.out.println("Accepted");
                         cBox.getChildren().remove(hatthree);
+                        
+                        gpane.getChildren().remove(dog);
+                         gpane.add(doghat, 1, 1);
                     }
                 });
                 
@@ -210,6 +236,16 @@ public class clothesButton extends Application {
                     cBox.getChildren().remove(glassesone);
                 }
             });
+
+
+            Button exit = new Button("");
+               exit.setGraphic(new ImageView(exitone));
+               exit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit);
+                }
+            });
             //    Button sunglassesone = new Button("");
             //    sunglassesone.setGraphic(new ImageView(sunglasses));
             //    Button tieone = new Button("");
@@ -221,9 +257,10 @@ public class clothesButton extends Application {
             //    Button scarfone = new Button("");
             //    scarfone.setGraphic(new ImageView(scarf));
             //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
-                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree);
+                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit);
                 hBox.getChildren().add(cBox);
                
+
            }
        });
    Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
@@ -260,8 +297,8 @@ public class clothesButton extends Application {
        hBox.getChildren().addAll(shower);
        hBox.getChildren().addAll(death);
  
-       StackPane.setAlignment(hBox, Pos.BOTTOM_CENTER);
-       bp.setCenter(vBox);
+       StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
+       bp.setCenter(gpane);
        bp.setBottom(hBox);
  
  
@@ -269,9 +306,9 @@ public class clothesButton extends Application {
        Scene scene = new Scene(sPane);
        primaryStage.setTitle("Package Pet"); // Set the stage title
        primaryStage.setScene(scene);
-       pane.setMinSize(1200, 650);
-       park.fitWidthProperty().bind(pane.widthProperty());
-       park.fitHeightProperty().bind(pane.heightProperty()); // Place the scene in the stage
+       bp.setMinSize(1200, 650);
+       park.fitWidthProperty().bind(bp.widthProperty());
+       park.fitHeightProperty().bind(bp.heightProperty()); // Place the scene in the stage
        primaryStage.show(); // Display the stage
    }
 }
