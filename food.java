@@ -37,6 +37,7 @@ public class food extends Application {
    double y = 300;
   
    @Override // Override the start method in the Application class
+
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
@@ -151,11 +152,16 @@ public class food extends Application {
        food.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                 Image doggyfood = new Image("images/doggyfood.png");
-                ImageView bowl = new ImageView();
-                bowl.setImage(doggyfood);
-                gpane.add(bowl, 1, 10);
-                // gpane.setRowIndex(dog, 1);
-                // gpane.setColumnIndex(dog, 1);
+                Button foodexit = new Button("");
+
+                foodexit.setGraphic(new ImageView(doggyfood));
+                foodexit.setStyle("-fx-background-color: transparent;");
+                gpane.add(foodexit, 1, 10);
+                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    gpane.getChildren().removeAll(foodexit);
+                }
+         });
        }
        });
   
