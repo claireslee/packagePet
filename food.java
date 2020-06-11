@@ -29,9 +29,8 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
-import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-public class background extends Application {
+public class food extends Application {
    double x = 300;
    double y = 300;
   
@@ -39,44 +38,23 @@ public class background extends Application {
        public void start(Stage primaryStage) {
        StackPane sPane = new StackPane();
        Image bg = new Image("images/backgroundimage.jpg");
-    //    ImageView pet = new ImageView();
-    //    pet.setImage(dog);
        ImageView park = new ImageView();
        park.setImage(bg);
       
        BorderPane bp = new BorderPane();
  
        HBox hBox = new HBox(10);
-       // VBox vBox = new VBox();
+       VBox vBox = new VBox();
 
        sPane.getChildren().add(park);
        sPane.getChildren().add(bp);
-       
      
        hBox.setAlignment(Pos.BOTTOM_CENTER);
-       // vBox.setPadding(new Insets(20, 50, 0, 0));
-       // vBox.setAlignment(Pos.BOTTOM_CENTER);
-    //     @FXML
-    //     private void doggie(ActionEvent event) throws Exception {
-    //         GridPane gpane = new GridPane();
-    //         gpane.getChildren().add(pet);
-    //         Node source = (Node)event.getSource();
-    //         Integer colIndex = GridPane.getColumnIndex(source);
-    //         Integer rowIndex = GridPane.getRowIndex(source);
-    //         GridPane.setConstraints(pet, colIndex, rowIndex);
-    //    }
-
-        GridPane gpane = new GridPane();
-        //gpane.getChildren().add(pet);
-        // gpane.setPadding(new Insets(10, 10, 10, 10));
-        gpane.setAlignment(Pos.CENTER);
-        gpane.setHgap(5);
-        gpane.setVgap(5);
-        ImageView dog = new ImageView("images/dog.png");
-        gpane.add(dog, 1, 1);
-
-        // gpane.addAll(dog,9, 6);
+       vBox.setPadding(new Insets(20, 50, 0, 0));
+       vBox.setAlignment(Pos.BOTTOM_CENTER);
+    
  
+      
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
        r1.setFill(Color.BLACK);
@@ -87,6 +65,7 @@ public class background extends Application {
        Rectangle r4 = new Rectangle(40, y);
        r4.setStroke(Color.BLACK);
        r4.setFill(Color.BLACK);
+      
       
        Rectangle r5 = new Rectangle(40, 300);
        r5.setStroke(Color.BLACK);
@@ -115,12 +94,12 @@ public class background extends Application {
            }
           
            if (r4.getHeight() != 0) {
-               y-=5;
+               y-=15;
                r4.setHeight(y);
            }
   
            else {
-               y-=5;
+               y-=15;
                r4.setHeight(y);
            }
        };
@@ -145,8 +124,10 @@ public class background extends Application {
        food.setGraphic(new ImageView(image1));
        food.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               System.out.println("Accepted");
-           }
+                Image doggyfood = new Image("images/doggyfood.png");
+                ImageView bowl = new ImageView();
+                bowl.setImage(doggyfood);
+       }
        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
@@ -192,7 +173,7 @@ public class background extends Application {
        hBox.getChildren().addAll(death);
  
        StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
-       bp.setCenter(gpane);
+       bp.setCenter(vBox);
        bp.setBottom(hBox);
  
  
