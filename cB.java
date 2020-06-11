@@ -177,6 +177,7 @@ public class cB extends Application {
         ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
         ImageView dogneck = new ImageView("images/dog-necklace.png");
         Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
+        Image resetone = new Image(getClass().getResourceAsStream("images/reset.jpg")); 
         
     //    Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
     //    Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
@@ -244,8 +245,26 @@ public class cB extends Application {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
                     cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit);
+
+                
                 }
             });
+
+            Button reset = new Button("");
+               reset.setGraphic(new ImageView(resetone));
+               reset.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    gpane.getChildren().remove(doghat);
+                         gpane.add(dog, 1, 1);
+                        cBox.getChildren().addAll(glassesone, hatthree, necklacetwo, exit)
+
+                
+                }
+            });
+
+
+            
             //    Button sunglassesone = new Button("");
             //    sunglassesone.setGraphic(new ImageView(sunglasses));
             //    Button tieone = new Button("");
