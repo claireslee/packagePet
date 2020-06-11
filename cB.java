@@ -177,6 +177,7 @@ public class cB extends Application {
         ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
         ImageView dogneck = new ImageView("images/dog-necklace.png");
         Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
+        Image resetone = new Image(getClass().getResourceAsStream("images/reset.jpg")); 
         
     //    Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
     //    Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
@@ -238,14 +239,39 @@ public class cB extends Application {
             });
 
 
+
+
+            Button reset = new Button("");
+            reset.setGraphic(new ImageView(resetone));
+            reset.setOnAction(new EventHandler<ActionEvent>() {
+             @Override public void handle(ActionEvent e) {
+                 System.out.println("Accepted");
+                 cBox.getChildren().addAll(glassesone, hatthree, necklacetwo);
+                 gpane.getChildren().remove(doghat);
+                      gpane.add(dog, 1, 1);
+                
+
+                } 
+            });
+
+
             Button exit = new Button("");
                exit.setGraphic(new ImageView(exitone));
                exit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
-                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit);
+                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit, reset);
+
+                
                 }
             });
+
+           
+
+                
+
+
+            
             //    Button sunglassesone = new Button("");
             //    sunglassesone.setGraphic(new ImageView(sunglasses));
             //    Button tieone = new Button("");
@@ -257,7 +283,7 @@ public class cB extends Application {
             //    Button scarfone = new Button("");
             //    scarfone.setGraphic(new ImageView(scarf));
             //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
-                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit);
+                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit, reset);
                 hBox.getChildren().add(cBox);
                
 
