@@ -239,29 +239,36 @@ public class cB extends Application {
             });
 
 
+
+
+            Button reset = new Button("");
+            reset.setGraphic(new ImageView(resetone));
+            reset.setOnAction(new EventHandler<ActionEvent>() {
+             @Override public void handle(ActionEvent e) {
+                 System.out.println("Accepted");
+                 cBox.getChildren().addAll(glassesone, hatthree, necklacetwo);
+                 gpane.getChildren().remove(doghat);
+                      gpane.add(dog, 1, 1);
+                
+
+                } 
+            });
+
+
             Button exit = new Button("");
                exit.setGraphic(new ImageView(exitone));
                exit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
-                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit);
+                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit, reset);
 
                 
                 }
             });
 
-            Button reset = new Button("");
-               reset.setGraphic(new ImageView(resetone));
-               reset.setOnAction(new EventHandler<ActionEvent>() {
-                @Override public void handle(ActionEvent e) {
-                    System.out.println("Accepted");
-                    gpane.getChildren().remove(doghat);
-                         gpane.add(dog, 1, 1);
-                        cBox.getChildren().addAll(glassesone, hatthree, necklacetwo, exit)
+           
 
                 
-                }
-            });
 
 
             
@@ -276,7 +283,7 @@ public class cB extends Application {
             //    Button scarfone = new Button("");
             //    scarfone.setGraphic(new ImageView(scarf));
             //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
-                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit);
+                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit, reset);
                 hBox.getChildren().add(cBox);
                
 
