@@ -136,20 +136,20 @@ public class clothesButton extends Application {
        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
-       Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
-       Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
-       Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
-       Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
-       Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpgg")); 
-       Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
+    //Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
+    //  Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
+    //    Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
+    //    Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
+    Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpg")); 
+    //    Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
        Image glasses = new Image(getClass().getResourceAsStream("images/glasses.png")); 
-       Image headband2 = new Image(getClass().getResourceAsStream("images/headband.png")); 
-       Image necklace1 = new Image(getClass().getResourceAsStream("images/heartnecklace.jpg")); 
+    //    Image headband2 = new Image(getClass().getResourceAsStream("images/headband.png")); 
+    //    Image necklace1 = new Image(getClass().getResourceAsStream("images/heartnecklace.jpg")); 
        Image necklace2 = new Image(getClass().getResourceAsStream("images/pearlnecklace.jpg")); 
-       Image scarf = new Image(getClass().getResourceAsStream("images/scarf.jpg")); 
-       Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
-       Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
-       Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
+    //    Image scarf = new Image(getClass().getResourceAsStream("images/scarf.jpg")); 
+    //    Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
+    //    Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
+     //Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
        Image dogglasseshat = new Image(getClass().getResourceAsStream("images/dog-glasses,hat.png"));
        Image dogglassesneck = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace.png")); 
        Image dogglassesneckhat = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace,hat.png")); 
@@ -161,38 +161,68 @@ public class clothesButton extends Application {
        clothes.setGraphic(new ImageView(image2));
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               Rectangle cBox = new Rectangle();
-               Button hatone = new Button("");
-               hatone.setGraphic(new ImageView(hat1));
-               Button hattwo = new Button("");
-               hattwo.setGraphic(new ImageView(hat2));
-               Button hatthree = new Button("");
-               hatthree.setGraphic(new ImageView(hat3));
-               Button hatfour = new Button("");
-               hatfour.setGraphic(new ImageView(hat4));
-               Button necklaceone = new Button("");
-               necklaceone.setGraphic(new ImageView(necklace1));
+               HBox cBox = new HBox();
+            // Button hatone = new Button("");
+            // hatone.setGraphic(new ImageView(hat1));
+            // hatone.setOnAction(new EventHandler<ActionEvent>() {
+            //     @Override public void handle(ActionEvent e) {
+            //         System.out.println("Accepted");
+            //     }
+            // });
+                // Button hattwo = new Button("");
+                // hattwo.setGraphic(new ImageView(hat2));
+                
+                Button hatthree = new Button("");
+                hatthree.setGraphic(new ImageView(hat3));
+                hatthree.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        System.out.println("Accepted");
+                        cBox.getChildren().remove(hatthree);
+                    }
+                });
+                
+            // Button hatfour = new Button("");
+            // hatfour.setGraphic(new ImageView(hat4));
+            // hatfour.setOnAction(new EventHandler<ActionEvent>() {
+            //     @Override public void handle(ActionEvent e) {
+            //         System.out.println("Accepted");
+            //     }
+            // });
+            //    Button necklaceone = new Button("");
+            //    necklaceone.setGraphic(new ImageView(necklace1));
                Button necklacetwo = new Button("");
                necklacetwo.setGraphic(new ImageView(necklace2));
-               Button headbandone = new Button("");
-               headbandone.setGraphic(new ImageView(headband1));
-               Button headbandtwo = new Button("");
-               headbandtwo.setGraphic(new ImageView(headband2));
-               Button glassesone = new Button("");
+               necklacetwo.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().remove(necklacetwo);
+                }
+            });
+            //    Button headbandone = new Button("");
+            //    headbandone.setGraphic(new ImageView(headband1));
+            //    Button headbandtwo = new Button("");
+            //    headbandtwo.setGraphic(new ImageView(headband2));
+                Button glassesone = new Button("");
                glassesone.setGraphic(new ImageView(glasses));
-               Button sunglassesone = new Button("");
-               sunglassesone.setGraphic(new ImageView(sunglasses));
-               Button tieone = new Button("");
-               tieone.setGraphic(new ImageView(tie));
-               Button bowtieone = new Button("");
-               bowtieone.setGraphic(new ImageView(bowtie));
-               Button bowone = new Button("");
-               bowone.setGraphic(new ImageView(bow));
-               Button scarfone = new Button("");
-               scarfone.setGraphic(new ImageView(scarf));
-               GridPane p = new GridPane();
-               p.getChildren().addAll(cBox, scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
-
+               glassesone.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().remove(glassesone);
+                }
+            });
+            //    Button sunglassesone = new Button("");
+            //    sunglassesone.setGraphic(new ImageView(sunglasses));
+            //    Button tieone = new Button("");
+            //    tieone.setGraphic(new ImageView(tie));
+            //    Button bowtieone = new Button("");
+            //    bowtieone.setGraphic(new ImageView(bowtie));
+            //    Button bowone = new Button("");
+            //    bowone.setGraphic(new ImageView(bow));
+            //    Button scarfone = new Button("");
+            //    scarfone.setGraphic(new ImageView(scarf));
+            //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
+                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree);
+                hBox.getChildren().add(cBox);
                
            }
        });

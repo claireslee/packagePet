@@ -18,7 +18,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -32,7 +31,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-public class food extends Application {
+public class cB extends Application {
    double x = 300;
    double y = 300;
   
@@ -69,16 +68,12 @@ public class food extends Application {
 
         GridPane gpane = new GridPane();
         //gpane.getChildren().add(pet);
-        //gpane.setPadding(new Insets(100, 100, 100, 100));
+        // gpane.setPadding(new Insets(10, 10, 10, 10));
         gpane.setAlignment(Pos.CENTER);
-        gpane.getColumnConstraints().add(new ColumnConstraints(100));
-        gpane.getColumnConstraints().add(new ColumnConstraints(300));
         gpane.setHgap(5);
-        gpane.setVgap(10);
+        gpane.setVgap(5);
         ImageView dog = new ImageView("images/dog.png");
         gpane.add(dog, 1, 1);
-        GridPane.setRowIndex(dog, 1);
-        GridPane.setColumnIndex(dog, 1);
 
         // gpane.addAll(dog,9, 6);
  
@@ -150,21 +145,122 @@ public class food extends Application {
        food.setGraphic(new ImageView(image1));
        food.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-                Image doggyfood = new Image("images/doggyfood.png");
-                ImageView bowl = new ImageView();
-                bowl.setImage(doggyfood);
-                gpane.add(bowl, 1, 10);
-                // gpane.setRowIndex(dog, 1);
-                // gpane.setColumnIndex(dog, 1);
-       }
+               System.out.println("Accepted");
+           }
        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+       //Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
+    //  Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
+    //    Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
+    //    Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
+    Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpg")); 
+    //    Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
+       Image glasses = new Image(getClass().getResourceAsStream("images/glasses.png")); 
+    //    Image headband2 = new Image(getClass().getResourceAsStream("images/headband.png")); 
+    //    Image necklace1 = new Image(getClass().getResourceAsStream("images/heartnecklace.jpg")); 
+       Image necklace2 = new Image(getClass().getResourceAsStream("images/pearlnecklace.jpg")); 
+    //    Image scarf = new Image(getClass().getResourceAsStream("images/scarf.jpg")); 
+    //    Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
+    //    Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
+     //Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
+    //    Image dogglasseshat = new Image(getClass().getResourceAsStream("images/dog-glasses,hat.png"));
+    //    Image dogglassesneck = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace.png")); 
+    //    Image dogglassesneckhat = new Image(getClass().getResourceAsStream("images/dog-glasses,necklace,hat.png")); 
+    //    Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
+    //    Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png"));
+        ImageView doghat = new ImageView("images/dog-hat.png");
+        ImageView dogglasseshat = new ImageView("images/dog-glasses,hat.png");
+        ImageView dogglassesneck = new ImageView("images/dog-glasses,necklace.png");
+        ImageView dogglassesneckhat = new ImageView("images/dog-glasses,necklace,hat.png");
+        ImageView dogglasses = new ImageView("images/dog-glasses.png");
+        ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
+        ImageView dogneck = new ImageView("images/dog-necklace.png");
+        Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
+        
+    //    Image dogneckhat = new Image(getClass().getResourceAsStream("images/dog-necklace,hat.png")); 
+    //    Image dogneck = new Image(getClass().getResourceAsStream("images/dog-necklace.png")); 
        Button clothes = new Button("");
        clothes.setGraphic(new ImageView(image2));
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               System.out.println("Accepted");
+            HBox cBox = new HBox();
+            // Button hatone = new Button("");
+            // hatone.setGraphic(new ImageView(hat1));
+            // hatone.setOnAction(new EventHandler<ActionEvent>() {
+            //     @Override public void handle(ActionEvent e) {
+            //         System.out.println("Accepted");
+            //     }
+            // });
+                // Button hattwo = new Button("");
+                // hattwo.setGraphic(new ImageView(hat2));
+                
+                Button hatthree = new Button("");
+                hatthree.setGraphic(new ImageView(hat3));
+                hatthree.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        System.out.println("Accepted");
+                        cBox.getChildren().remove(hatthree);
+                        
+                        gpane.getChildren().remove(dog);
+                         gpane.add(doghat, 1, 1);
+                    }
+                });
+                
+            // Button hatfour = new Button("");
+            // hatfour.setGraphic(new ImageView(hat4));
+            // hatfour.setOnAction(new EventHandler<ActionEvent>() {
+            //     @Override public void handle(ActionEvent e) {
+            //         System.out.println("Accepted");
+            //     }
+            // });
+            //    Button necklaceone = new Button("");
+            //    necklaceone.setGraphic(new ImageView(necklace1));
+               Button necklacetwo = new Button("");
+               necklacetwo.setGraphic(new ImageView(necklace2));
+               necklacetwo.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().remove(necklacetwo);
+                }
+            });
+            //    Button headbandone = new Button("");
+            //    headbandone.setGraphic(new ImageView(headband1));
+            //    Button headbandtwo = new Button("");
+            //    headbandtwo.setGraphic(new ImageView(headband2));
+                Button glassesone = new Button("");
+               glassesone.setGraphic(new ImageView(glasses));
+               glassesone.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().remove(glassesone);
+                }
+            });
+
+
+            Button exit = new Button("");
+               exit.setGraphic(new ImageView(exitone));
+               exit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit);
+                }
+            });
+            //    Button sunglassesone = new Button("");
+            //    sunglassesone.setGraphic(new ImageView(sunglasses));
+            //    Button tieone = new Button("");
+            //    tieone.setGraphic(new ImageView(tie));
+            //    Button bowtieone = new Button("");
+            //    bowtieone.setGraphic(new ImageView(bowtie));
+            //    Button bowone = new Button("");
+            //    bowone.setGraphic(new ImageView(bow));
+            //    Button scarfone = new Button("");
+            //    scarfone.setGraphic(new ImageView(scarf));
+            //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
+                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit);
+                hBox.getChildren().add(cBox);
+               
+
            }
        });
    Image image3 = new Image(getClass().getResourceAsStream("images/ballicon.jpg"));
