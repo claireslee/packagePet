@@ -76,7 +76,7 @@ public class background extends Application {
         gpane.add(dog, 1, 1);
 
         // gpane.addAll(dog,9, 6);
-             
+ 
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
        r1.setFill(Color.BLACK);
