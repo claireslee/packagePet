@@ -242,6 +242,63 @@ public class death extends Application {
                         lookup.setTextFill(Color.RED);
     
                         gpane.add(lookup, 1, 2);
+
+                        // // Create an animation for alternating text
+                        // Timeline animation = new Timeline(
+                        //     new KeyFrame(Duration.millis(5000), eventHandler));
+                        //     animation.setCycleCount(Timeline.INDEFINITE);
+                        //     animation.play(); // Start animation
+                        // // Pause and resume animation
+                        // sPane.setOnMouseClicked(e -> {
+                        //     if (animation.getStatus() == Animation.Status.PAUSED) {
+                        //         animation.play();
+                        //     }
+                    
+                        //     else {
+                        //         animation.pause();
+                        // }
+
+                        StackPane pane = new StackPane();
+                        Text text = new Text(20, 50, "Programming is fun");
+                        text.setFill(Color.RED);
+                        pane.getChildren().add(text); // Place text into the stack pane
+                        
+                        // Create a handler for changing text
+
+                        EventHandler<ActionEvent> eventHandler = e -> {
+                            if (text.getText().length() != 0) {
+                                text.setText("");
+                            }
+                            
+                            else {
+                                text.setText("Programming is fun");
+                            }
+                        };
+                        
+                        // Create an animation for alternating text
+                            Timeline animation = new Timeline(
+                            new KeyFrame(Duration.millis(500), eventHandler));
+                            animation.setCycleCount(Timeline.INDEFINITE);
+                            animation.play(); // Start animation
+                        
+                        // Pause and resume animation
+                        text.setOnMouseClicked(e -> {
+                        
+                            if (animation.getStatus() == Animation.Status.PAUSED) {
+                                animation.play();
+                            }
+                        
+                            else {
+                            animation.pause();
+                            }
+                        });
+
+        });
+
+
+
+
+
                     }
                 });
             }
