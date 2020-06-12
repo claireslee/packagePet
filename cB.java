@@ -487,17 +487,35 @@ public class cB extends Application {
                         if (playPressed == true)
                         {
                             pathTransition.play(); 
+                            y-=10;
+                            r4.setHeight(y);
+
                             playPressed = false;
                         }
 
 
                     }
                     });
+                Button exit = new Button("");
+               exit.setGraphic(new ImageView(exitone));
+               exit.setStyle("-fx-background-color: transparent;");
+               exit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    bp.getChildren().removeAll(circle, path, exit);
+                    gpane.getChildren().removeAll(play);
+
+
+                
+                }
+            });
 
                 Group root = new Group(circle);
                 Scene scene = new Scene(root, 600, 300);   
-                bp.getChildren().addAll(circle, path);
-                gpane.getChildren().add(play);
+                bp.getChildren().addAll(circle, path, exit);
+                gpane.getChildren().addAll(play);
+                bp.setTop(exit);
+                
              } 
          
        });
