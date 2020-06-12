@@ -11,6 +11,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -215,25 +217,31 @@ public class death extends Application {
                 System.out.println("Accepted");
             }
         });
+
     Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png")); 
         Button death = new Button("");
         death.setGraphic(new ImageView(image5));
         death.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                Image doggyfood = new Image("images/doggyfood.png");
-                Button foodexit = new Button("");
- 
-                foodexit.setGraphic(new ImageView(doggyfood));
-                foodexit.setStyle("-fx-background-color: transparent;");
-                gpane.add(foodexit, 1, 2);
+                Image gift = new Image("images/gift.png");
+                Button present = new Button("");
+                
+                present.setGraphic(new ImageView(gift));
+                present.setStyle("-fx-background-color: transparent;");
+                gpane.add(present, 1, 2);
 
-                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                present.setOnAction(new EventHandler<ActionEvent>() {
                     @Override public void handle(ActionEvent e) {
-                        gpane.getChildren().removeAll(foodexit);
-                        if (x < 300 && x >= 1) {
-                            x+=10;
-                            r1.setHeight(x);
-                        }
+                        gpane.getChildren().removeAll(present);
+                        Rectangle rect = new Rectangle(207, 75);
+                        rect.setFill(Color.WHITE);
+                        gpane.add(rect, 1, 2);
+
+                        Label lookup = new Label("L00K UP!");
+                        lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
+                        lookup.setTextFill(Color.RED);
+    
+                        gpane.add(lookup, 1, 2);
                     }
                 });
             }
