@@ -14,10 +14,12 @@ import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.RowConstraints;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -71,14 +73,18 @@ public class cB extends Application {
 
         GridPane gpane = new GridPane();
         //gpane.getChildren().add(pet);
-        // gpane.setPadding(new Insets(10, 10, 10, 10));
+        gpane.setPadding(new Insets(2, 2, 2, 2));
         gpane.setAlignment(Pos.CENTER);
-        gpane.setHgap(5);
-        gpane.setVgap(5);
+        gpane.getColumnConstraints().add(new ColumnConstraints(100));
+        gpane.getColumnConstraints().add(new ColumnConstraints(450));
+        gpane.getColumnConstraints().add(new ColumnConstraints(100));
+        gpane.getRowConstraints().add(new RowConstraints(200));
+        gpane.getRowConstraints().add(new RowConstraints(300));
+        gpane.getRowConstraints().add(new RowConstraints(100));
+        // gpane.setHgap(5);
+        // gpane.setVgap(10);
         ImageView dog = new ImageView("images/dog.png");
         gpane.add(dog, 1, 1);
-
-        // gpane.addAll(dog,9, 6);
  
        Rectangle r1 = new Rectangle(40, x);
        r1.setStroke(Color.BLACK);
@@ -144,13 +150,31 @@ public class cB extends Application {
        });
  
        Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
-       Button food = new Button("");
-       food.setGraphic(new ImageView(image1));
-       food.setOnAction(new EventHandler<ActionEvent>() {
-           @Override public void handle(ActionEvent e) {
-               System.out.println("Accepted");
-           }
-       });
+        Button food = new Button("");
+        food.setGraphic(new ImageView(image1));
+        food.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                Image doggyfood = new Image("images/doggyfood.png");
+                Button foodexit = new Button("");
+ 
+                foodexit.setGraphic(new ImageView(doggyfood));
+                foodexit.setStyle("-fx-background-color: transparent;");
+                gpane.add(foodexit, 1, 2);
+                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    gpane.getChildren().removeAll(foodexit);
+                    if (x < 300) {
+                        x+=20;
+                        r1.setHeight(x);
+                    }
+
+                    else if (x == 0) {
+                        
+                    }
+                }
+            });
+        }
+        });
   
        Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
        //Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
@@ -416,7 +440,7 @@ public class cB extends Application {
             Button shower = new Button("");
             shower.setGraphic(new ImageView(showers));
             shower.setStyle("-fx-background-color: transparent;");
-            gpane.add(shower, 1, 2);
+            gpane.add(shower, 2, 1);
            }
        });
    Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));  
