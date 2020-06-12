@@ -19,6 +19,8 @@ import javafx.scene.shape.CubicCurveTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -554,6 +556,70 @@ public class cB extends Application {
        death.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
                System.out.println("Accepted");
+               Image gift = new Image("images/gift.png");
+                Button present = new Button("");
+                
+                present.setGraphic(new ImageView(gift));
+                present.setStyle("-fx-background-color: transparent;");
+                gpane.add(present, 1, 2);
+
+                present.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        gpane.getChildren().removeAll(present);
+                        Rectangle rect = new Rectangle(207, 75);
+                        rect.setFill(Color.WHITE);
+                        gpane.add(rect, 1, 2);
+
+                        Label lookup = new Label("L00K UP!");
+                        lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
+                        // lookup.setStyle("-fx-font-size:40");
+                        // lookup.setStyle("-fx-font-weight:BOLD");
+                        // lookup.setStyle("-fx-font-font:Verdana");
+                        lookup.setTextFill(Color.RED);
+    
+                        gpane.add(lookup, 1, 2);
+
+                        Image anvil = new Image("images/anvil.png");
+                        ImageView anvilview = new ImageView();
+
+
+                    
+                        Path path = new Path();
+
+                        MoveTo moveTo = new MoveTo();
+                        moveTo.setX(100.0f);
+                        moveTo.setY(200.0f);
+
+                        CubicCurveTo cubicTo = new CubicCurveTo();
+                        cubicTo.setControlX1(200.0f);
+                        cubicTo.setControlY1(100.0f);
+                        cubicTo.setControlX2(300.0f);
+                        cubicTo.setControlY2(100.0f);
+                        cubicTo.setX(600.0f);
+                        cubicTo.setY(185.0f);
+
+                        path.getElements().add(moveTo);
+                        path.getElements().add(cubicTo);
+                        path.setOpacity(0.0);
+                        PathTransition pathTransition = new PathTransition();  
+                        pathTransition.setDuration(Duration.millis(1000)); 
+                        
+                        pathTransition.setNode(anvilview); 
+                        // pathTransition.setPath(path);  
+                        
+                        pathTransition.setOrientation(PathTransition.OrientationType.
+                        ORTHOGONAL_TO_TANGENT); 
+                        pathTransition.setCycleCount(2); 
+                        pathTransition.setAutoReverse(true);     
+
+                        // Group root = new Group(circle);
+                        // Scene scene = new Scene(root, 600, 300);   
+                        // bp.getChildren().addAll(circle, path);
+                        // gpane.getChildren().add(play);
+
+             } 
+         
+       });
            }
        });
       

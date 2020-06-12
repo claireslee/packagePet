@@ -19,6 +19,8 @@ import javafx.scene.shape.CubicCurveTo;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -247,10 +249,10 @@ public class anvil extends Application {
                         gpane.add(rect, 1, 2);
 
                         Label lookup = new Label("L00K UP!");
-                        //lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
-                        lookup.setStyle("-fx-font-size:40");
-                        lookup.setStyle("-fx-font-weight:BOLD");
-                        lookup.setStyle("-fx-font-font:Verdana");
+                        lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
+                        // lookup.setStyle("-fx-font-size:40");
+                        // lookup.setStyle("-fx-font-weight:BOLD");
+                        // lookup.setStyle("-fx-font-font:Verdana");
                         lookup.setTextFill(Color.RED);
     
                         gpane.add(lookup, 1, 2);
@@ -292,9 +294,13 @@ public class anvil extends Application {
                         // Scene scene = new Scene(root, 600, 300);   
                         // bp.getChildren().addAll(circle, path);
                         // gpane.getChildren().add(play);
+
              } 
          
        });
+    }
+});
+
 
         hBox.getChildren().addAll(food);
         hBox.getChildren().addAll(clothes);
@@ -315,6 +321,4 @@ public class anvil extends Application {
         primaryStage.show(); // Display the stage
     
     }
-        });
-        }
-    }
+}
