@@ -2,6 +2,7 @@ import javafx.animation.Animation;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
@@ -26,6 +28,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.geometry.Pos;
+import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -426,8 +429,68 @@ public class cB extends Application {
        ball.setGraphic(new ImageView(image3));
        ball.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
+               
                System.out.println("Accepted");
-           }
+    	Circle ball = new Circle(70, Color.CADETBLUE);
+        ball.relocate(5, 5);
+        Button exit = new Button("");
+               exit.setGraphic(new ImageView(exitone));
+               exit.setStyle("-fx-background-color: transparent;");
+               exit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    System.out.println("Accepted");
+                    bp.getChildren().removeAll(ball,exit);
+
+                
+                }
+            });
+            
+
+        bp.getChildren().addAll(ball, exit);
+        //bp.setTop(exit);
+
+        // stage.setTitle("Animated Ball");
+        // stage.setScene(scene);
+        // stage.show();
+
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(25),
+                new EventHandler<ActionEvent>() {
+
+        	double dx = 12; //Step on x or velocity
+        	double dy = 3; //Step on y
+
+            @Override
+            public void handle(ActionEvent t) {
+            	//move the ball
+            	ball.setLayoutX(ball.getLayoutX() + dx);
+            	ball.setLayoutY(ball.getLayoutY() + dy);
+
+                Bounds bounds = bp.getBoundsInLocal();
+
+                //If the ball reaches the left or right border make the step negative
+                if(ball.getLayoutX() <= (bounds.getMinX() + ball.getRadius()) ||
+                        ball.getLayoutX() >= (bounds.getMaxX() - ball.getRadius()) ){
+
+                	dx = -dx;
+
+                }
+
+                //If the ball reaches the bottom or top border make the step negative
+                if((ball.getLayoutY() >= (bounds.getMaxY() - ball.getRadius())) ||
+                        (ball.getLayoutY() <= (bounds.getMinY() + ball.getRadius()))){
+
+                	dy = -dy;
+
+                }
+            }
+        }));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+        
+    }
+        
+
+           
        });
       
    Image image4 = new Image(getClass().getResourceAsStream("images/showericon.png"));
@@ -436,12 +499,24 @@ public class cB extends Application {
        shower.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
             System.out.println("Accepted");
-            Image showers = new Image(getClass().getResourceAsStream("images/showerss.png"));
+            Image showers = new Image(getClass().getResourceAsStream("images/showerzz.png"));
             Button shower = new Button("");
             shower.setGraphic(new ImageView(showers));
             shower.setStyle("-fx-background-color: transparent;");
             gpane.add(shower,0,0);
             shower.setAlignment(Pos.TOP_CENTER);
+            shower.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e){
+                    gpane.getChildren().remove(shower);
+                    if (y<300 && y>=1){
+                        y+=20;
+                    r4.setHeight(y);
+
+                    }
+
+                
+            }
+        });
             
             
            }
