@@ -161,6 +161,14 @@ public class food extends Application {
                 foodexit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     gpane.getChildren().removeAll(foodexit);
+                    if (x < 300) {
+                        x+=10;
+                        r1.setHeight(x);
+                    }
+
+                    else if (x == 0) {
+                        
+                    }
                 }
             });
         }
