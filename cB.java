@@ -42,12 +42,15 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
+
 public class cB extends Application {
    double x = 300;
    double y = 300;
    boolean hatPressed = false;
    boolean necklacePressed = false;
    boolean glassesPressed = false;
+   boolean playPressed = false;
+
   
    @Override // Override the start method in the Application class
        public void start(Stage primaryStage) {
@@ -461,6 +464,7 @@ public class cB extends Application {
 
                 path.getElements().add(moveTo);
                 path.getElements().add(cubicTo);
+                path.setOpacity(0.0);
                 PathTransition pathTransition = new PathTransition();  
                 pathTransition.setDuration(Duration.millis(1000)); 
                 
@@ -472,9 +476,24 @@ public class cB extends Application {
                 pathTransition.setCycleCount(2); 
                 pathTransition.setAutoReverse(true); 
                 // thingy
-                Button play = new Button("yes");
+                Button play = new Button("Pass!"); 
+                play.setStyle("-fx-font-size:15");
                 
-                pathTransition.play(); 
+
+                play.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        playPressed = true;
+
+                        if (playPressed == true)
+                        {
+                            pathTransition.play(); 
+                            playPressed = false;
+                        }
+
+
+                    }
+                    });
+
                 Group root = new Group(circle);
                 Scene scene = new Scene(root, 600, 300);   
                 bp.getChildren().addAll(circle, path);
