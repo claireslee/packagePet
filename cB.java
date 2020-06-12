@@ -203,11 +203,41 @@ public class cB extends Application {
                 hatthree.setGraphic(new ImageView(hat3));
                 hatthree.setOnAction(new EventHandler<ActionEvent>() {
                     @Override public void handle(ActionEvent e) {
+
                         System.out.println("Accepted");
                         cBox.getChildren().remove(hatthree);
+                        hatPressed = true;
                         
                         gpane.getChildren().remove(dog);
-                        gpane.add(doghat, 1, 1);
+                        if (hatPressed == true && glassesPressed == false && necklacePressed == false){
+                            gpane.add(doghat, 1, 1);
+                            gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                        }
+                        if (hatPressed == true && glassesPressed == true && necklacePressed == false){
+                            gpane.add(dogglasseshat, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
+                        }
+                        if (hatPressed == true && glassesPressed == true && necklacePressed == true){
+                            gpane.add(dogglassesneckhat, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
+                        }
+                        if (hatPressed == true && glassesPressed == false && necklacePressed == true){
+                            gpane.add(dogneckhat, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                        }
+                        if (necklacePressed == true && hatPressed == false && glassesPressed == false){
+                            gpane.add(dogneck, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                        }
+                        if (necklacePressed == true && hatPressed == false && glassesPressed == true){
+                            gpane.add(dogglassesneck, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
+                        }
+                        if (glassesPressed == true && hatPressed == false && necklacePressed == false){
+                            gpane.add(dogglasses, 1, 1);
+                            gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                        }
+
 
                         
                     }
@@ -226,11 +256,38 @@ public class cB extends Application {
                necklacetwo.setGraphic(new ImageView(necklace2));
                necklacetwo.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
+                    necklacePressed = true;
                     System.out.println("Accepted");
                     cBox.getChildren().remove(necklacetwo);
                     gpane.getChildren().remove(dog);
-                    gpane.add(dogneck, 1, 1);
-
+                    if (hatPressed == true && glassesPressed == false && necklacePressed == false){
+                        gpane.add(doghat, 1, 1);
+                        gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (hatPressed == true && glassesPressed == true && necklacePressed == false){
+                        gpane.add(dogglasseshat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
+                    }
+                    if (hatPressed == true && glassesPressed == true && necklacePressed == true){
+                        gpane.add(dogglassesneckhat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
+                    }
+                    if (hatPressed == true && glassesPressed == false && necklacePressed == true){
+                        gpane.add(dogneckhat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (necklacePressed == true && hatPressed == false && glassesPressed == false){
+                        gpane.add(dogneck, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (necklacePressed == true && hatPressed == false && glassesPressed == true){
+                        gpane.add(dogglassesneck, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (glassesPressed == true && hatPressed == false && necklacePressed == false){
+                        gpane.add(dogglasses, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
 
                 }
             });
@@ -242,10 +299,40 @@ public class cB extends Application {
                glassesone.setGraphic(new ImageView(glasses));
                glassesone.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
+                    glassesPressed = true;
                     System.out.println("Accepted");
                     cBox.getChildren().remove(glassesone);
                     gpane.getChildren().remove(dog);
-                    gpane.add(dogglasses, 1, 1);
+                    if (hatPressed == true && glassesPressed == false && necklacePressed == false){
+                        gpane.add(doghat, 1, 1);
+                        gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (hatPressed == true && glassesPressed == true && necklacePressed == false){
+                        gpane.add(dogglasseshat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
+                    }
+                    if (hatPressed == true && glassesPressed == true && necklacePressed == true){
+                        gpane.add(dogglassesneckhat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
+                    }
+                    if (hatPressed == true && glassesPressed == false && necklacePressed == true){
+                        gpane.add(dogneckhat, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (necklacePressed == true && hatPressed == false && glassesPressed == false){
+                        gpane.add(dogneck, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (necklacePressed == true && hatPressed == false && glassesPressed == true){
+                        gpane.add(dogglassesneck, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
+                    }
+                    if (glassesPressed == true && hatPressed == false && necklacePressed == false){
+                        gpane.add(dogglasses, 1, 1);
+                        gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    }
+                    
+                    
                 }
             });
 
@@ -254,11 +341,15 @@ public class cB extends Application {
 
             Button reset = new Button("");
             reset.setGraphic(new ImageView(resetone));
+            reset.setStyle("-fx-background-color: transparent;");
             reset.setOnAction(new EventHandler<ActionEvent>() {
              @Override public void handle(ActionEvent e) {
+                 glassesPressed = false;
+                 necklacePressed = false;
+                 hatPressed = false;
                  System.out.println("Accepted");
             
-                 gpane.getChildren().removeAll(doghat, dogneck, dogglasses);
+                 gpane.getChildren().removeAll(doghat, dogneck, dogglasses, dogglasseshat, dogglassesneck, dogglassesneckhat, dogneckhat);
                       gpane.add(dog, 1, 1);
 
                 cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo);
@@ -271,6 +362,7 @@ public class cB extends Application {
 
             Button exit = new Button("");
                exit.setGraphic(new ImageView(exitone));
+               exit.setStyle("-fx-background-color: transparent;");
                exit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
@@ -319,7 +411,12 @@ public class cB extends Application {
        shower.setGraphic(new ImageView(image4));
        shower.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               System.out.println("Accepted");
+            System.out.println("Accepted");
+            Image showers = new Image(getClass().getResourceAsStream("images/showers.png"));
+            Button shower = new Button("");
+            shower.setGraphic(new ImageView(showers));
+            shower.setStyle("-fx-background-color: transparent;");
+            gpane.add(shower, 1, 2);
            }
        });
    Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));  
