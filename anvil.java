@@ -2,7 +2,11 @@ import javafx.animation.Animation;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.scene.shape.*;
+import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
+import javafx.animation.PathTransition.OrientationType;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -10,9 +14,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.CubicCurveTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -28,6 +34,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.geometry.Pos;
+import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
@@ -39,6 +46,8 @@ import javafx.scene.image.ImageView;
 public class anvil extends Application {
     double x = 300;
     double y = 300;
+
+
     @Override // Override the start method in the Application class
         public void start(Stage primaryStage) {
         StackPane sPane = new StackPane();
@@ -238,25 +247,54 @@ public class anvil extends Application {
                         gpane.add(rect, 1, 2);
 
                         Label lookup = new Label("L00K UP!");
-                        lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
+                        //lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
+                        lookup.setStyle("-fx-font-size:40");
+                        lookup.setStyle("-fx-font-weight:BOLD");
+                        lookup.setStyle("-fx-font-font:Verdana");
                         lookup.setTextFill(Color.RED);
     
                         gpane.add(lookup, 1, 2);
 
-                        // Create an animation for alternating text
-                        Timeline animation = new Timeline(
-                            new KeyFrame(Duration.millis(5000), eventHandler));
-                            animation.setCycleCount(Timeline.INDEFINITE);
-                            animation.play(); // Start animation
-                        // Pause and resume animation
-                        sPane.setOnMouseClicked(e -> {
-                            if (animation.getStatus() == Animation.Status.PAUSED) {
-                                animation.play();
-                            }
+                        Image anvil = new Image("images/anvil.png");
+                        ImageView anvilview = new ImageView();
+
+
                     
-                            else {
-                                animation.pause();
-                        }
+                        Path path = new Path();
+
+                        MoveTo moveTo = new MoveTo();
+                        moveTo.setX(100.0f);
+                        moveTo.setY(200.0f);
+
+                        CubicCurveTo cubicTo = new CubicCurveTo();
+                        cubicTo.setControlX1(200.0f);
+                        cubicTo.setControlY1(100.0f);
+                        cubicTo.setControlX2(300.0f);
+                        cubicTo.setControlY2(100.0f);
+                        cubicTo.setX(600.0f);
+                        cubicTo.setY(185.0f);
+
+                        path.getElements().add(moveTo);
+                        path.getElements().add(cubicTo);
+                        path.setOpacity(0.0);
+                        PathTransition pathTransition = new PathTransition();  
+                        pathTransition.setDuration(Duration.millis(1000)); 
+                        
+                        pathTransition.setNode(anvilview); 
+                        // pathTransition.setPath(path);  
+                        
+                        pathTransition.setOrientation(PathTransition.OrientationType.
+                        ORTHOGONAL_TO_TANGENT); 
+                        pathTransition.setCycleCount(2); 
+                        pathTransition.setAutoReverse(true);     
+
+                        // Group root = new Group(circle);
+                        // Scene scene = new Scene(root, 600, 300);   
+                        // bp.getChildren().addAll(circle, path);
+                        // gpane.getChildren().add(play);
+             } 
+         
+       });
 
         hBox.getChildren().addAll(food);
         hBox.getChildren().addAll(clothes);
@@ -266,6 +304,7 @@ public class anvil extends Application {
         StackPane.setAlignment(bp, Pos.BOTTOM_CENTER);
         bp.setCenter(gpane);
         bp.setBottom(hBox);
+
         // Create a scene and place it in the stage
         Scene scene = new Scene(sPane);
         primaryStage.setTitle("Package Pet"); // Set the stage title
@@ -274,5 +313,8 @@ public class anvil extends Application {
         park.fitWidthProperty().bind(bp.widthProperty());
         park.fitHeightProperty().bind(bp.heightProperty()); // Place the scene in the stage
         primaryStage.show(); // Display the stage
+    
     }
-}
+        });
+        }
+    }
