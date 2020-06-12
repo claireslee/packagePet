@@ -80,6 +80,10 @@ public class food extends Application {
         // gpane.setVgap(10);
         ImageView dog = new ImageView("images/dog.png");
         gpane.add(dog, 1, 1);
+
+        ImageView deaddog = new ImageView("images/deaddog.jpg");
+        
+        
         //  ColumnConstraints column1 = new ColumnConstraints(100,100,Double.MAX_VALUE);
         // ColumnConstraints column2 = new ColumnConstraints(100,100,Double.MAX_VALUE);
         // ColumnConstraints column3 = new ColumnConstraints(100,100,Double.MAX_VALUE);
@@ -113,18 +117,20 @@ public class food extends Application {
         StackPane.setAlignment(l2, Pos.CENTER_RIGHT);
         // Create a handler for changing text
         EventHandler<ActionEvent> eventHandler = e -> {
-            if (r1.getHeight() != 0) {
-                x-=10;
+            if (r1.getHeight() > 0) {
+                x-=10; //x=10
                 r1.setHeight(x);
             }
     
             else {
-                x-=10;
-                r1.setHeight(x);
+                //x-=10;
+                //r1.setHeight(x);
+                gpane.add(deaddog, 1, 1);
+                gpane.getChildren().remove(dog);
             }
         
             if (r4.getHeight() != 0) {
-                y-=5;
+                y-=5; //x=5
                 r4.setHeight(y);
             }
             else {
@@ -132,6 +138,14 @@ public class food extends Application {
                 r4.setHeight(y);
             }
         };
+
+        //if (x == 0) {
+            // dog.setImage(null);
+            // System.gc();
+            //gpane.add(deaddog, 1, 1);
+            //gpane.getChildren().remove(dog);
+        //}
+    
         // Create an animation for alternating text
         Timeline animation = new Timeline(
             new KeyFrame(Duration.millis(5000), eventHandler));
@@ -147,6 +161,7 @@ public class food extends Application {
                 animation.pause();
             }
         });
+
         Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
         Button food = new Button("");
         food.setGraphic(new ImageView(image1));
@@ -158,21 +173,25 @@ public class food extends Application {
                 foodexit.setGraphic(new ImageView(doggyfood));
                 foodexit.setStyle("-fx-background-color: transparent;");
                 gpane.add(foodexit, 1, 2);
-                foodexit.setOnAction(new EventHandler<ActionEvent>() {
-                @Override public void handle(ActionEvent e) {
-                    gpane.getChildren().removeAll(foodexit);
-                    if (x < 300) {
-                        x+=10;
-                        r1.setHeight(x);
-                    }
 
-                    else if (x == 0) {
-                        
+                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        gpane.getChildren().removeAll(foodexit);
+                        if (x < 300 && x >= 1) {
+                            x+=10;
+                            r1.setHeight(x);
+                        }
                     }
-                }
-            });
-        }
+                });
+            }
+
+            
         });
+
+        
+
+
+        
     Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
         Button clothes = new Button("");
         clothes.setGraphic(new ImageView(image2));
