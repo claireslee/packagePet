@@ -33,7 +33,8 @@ import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-public class food extends Application {
+
+public class death extends Application {
     double x = 300;
     double y = 300;
     @Override // Override the start method in the Application class
@@ -219,7 +220,22 @@ public class food extends Application {
         death.setGraphic(new ImageView(image5));
         death.setOnAction(new EventHandler<ActionEvent>() {
             @Override public void handle(ActionEvent e) {
-                System.out.println("Accepted");
+                Image doggyfood = new Image("images/doggyfood.png");
+                Button foodexit = new Button("");
+ 
+                foodexit.setGraphic(new ImageView(doggyfood));
+                foodexit.setStyle("-fx-background-color: transparent;");
+                gpane.add(foodexit, 1, 2);
+
+                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                        gpane.getChildren().removeAll(foodexit);
+                        if (x < 300 && x >= 1) {
+                            x+=10;
+                            r1.setHeight(x);
+                        }
+                    }
+                });
             }
         });
     
