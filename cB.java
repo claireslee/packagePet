@@ -3,7 +3,10 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
+import javafx.scene.shape.*;
+import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
+import javafx.animation.PathTransition.OrientationType;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -12,6 +15,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.CubicCurveTo;
+import javafx.scene.shape.MoveTo;
+import javafx.scene.shape.Path;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
@@ -431,66 +437,50 @@ public class cB extends Application {
            @Override public void handle(ActionEvent e) {
                
                System.out.println("Accepted");
-    	Circle ball = new Circle(70, Color.CADETBLUE);
-        ball.relocate(5, 5);
-        Button exit = new Button("");
-               exit.setGraphic(new ImageView(exitone));
-               exit.setStyle("-fx-background-color: transparent;");
-               exit.setOnAction(new EventHandler<ActionEvent>() {
-                @Override public void handle(ActionEvent e) {
-                    System.out.println("Accepted");
-                    bp.getChildren().removeAll(ball,exit);
+               
+                Circle circle = new Circle(); 
+                circle.setCenterX(100.0f); 
+                circle.setCenterY(135.0f); 
+                circle.setRadius(35.0f); 
+                circle.setFill(Color.BLUEVIOLET); 
+                circle.setStrokeWidth(20);     
+                 
+                Path path = new Path();
 
+                MoveTo moveTo = new MoveTo();
+                moveTo.setX(100.0f);
+                moveTo.setY(200.0f);
+
+                CubicCurveTo cubicTo = new CubicCurveTo();
+                cubicTo.setControlX1(200.0f);
+                cubicTo.setControlY1(100.0f);
+                cubicTo.setControlX2(300.0f);
+                cubicTo.setControlY2(100.0f);
+                cubicTo.setX(600.0f);
+                cubicTo.setY(185.0f);
+
+                path.getElements().add(moveTo);
+                path.getElements().add(cubicTo);
+                PathTransition pathTransition = new PathTransition();  
+                pathTransition.setDuration(Duration.millis(1000)); 
                 
-                }
-            });
-            
-
-        bp.getChildren().addAll(ball, exit);
-        //bp.setTop(exit);
-
-        // stage.setTitle("Animated Ball");
-        // stage.setScene(scene);
-        // stage.show();
-
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(25),
-                new EventHandler<ActionEvent>() {
-
-        	double dx = 12; //Step on x or velocity
-        	double dy = 3; //Step on y
-
-            @Override
-            public void handle(ActionEvent t) {
-            	//move the ball
-            	ball.setLayoutX(ball.getLayoutX() + dx);
-            	ball.setLayoutY(ball.getLayoutY() + dy);
-
-                Bounds bounds = bp.getBoundsInLocal();
-
-                //If the ball reaches the left or right border make the step negative
-                if(ball.getLayoutX() <= (bounds.getMinX() + ball.getRadius()) ||
-                        ball.getLayoutX() >= (bounds.getMaxX() - ball.getRadius()) ){
-
-                	dx = -dx;
-
-                }
-
-                //If the ball reaches the bottom or top border make the step negative
-                if((ball.getLayoutY() >= (bounds.getMaxY() - ball.getRadius())) ||
-                        (ball.getLayoutY() <= (bounds.getMinY() + ball.getRadius()))){
-
-                	dy = -dy;
-
-                }
-            }
-        }));
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.play();
-        
-    }
-        
-
-           
+                pathTransition.setNode(circle); 
+                pathTransition.setPath(path);  
+                
+                pathTransition.setOrientation(PathTransition.OrientationType.
+                ORTHOGONAL_TO_TANGENT); 
+                pathTransition.setCycleCount(2); 
+                pathTransition.setAutoReverse(true); 
+                // thingy
+                Button play = new Button("yes");
+                
+                pathTransition.play(); 
+                Group root = new Group(circle);
+                Scene scene = new Scene(root, 600, 300);   
+                bp.getChildren().addAll(circle, path);
+                gpane.getChildren().add(play);
+             } 
+         
        });
       
    Image image4 = new Image(getClass().getResourceAsStream("images/showericon.png"));
