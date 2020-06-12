@@ -236,11 +236,11 @@ public class death extends Application {
                         Rectangle rect = new Rectangle(207, 75);
                         rect.setFill(Color.WHITE);
                         gpane.add(rect, 1, 2);
-                        
+
                         Label lookup = new Label("L00K UP!");
                         lookup.setFont(Font.font("Verdana", FontWeight.BOLD, 40));
                         lookup.setTextFill(Color.RED);
-                        
+    
                         gpane.add(lookup, 1, 2);
                     }
                 });
