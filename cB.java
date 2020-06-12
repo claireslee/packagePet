@@ -436,11 +436,14 @@ public class cB extends Application {
        shower.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
             System.out.println("Accepted");
-            Image showers = new Image(getClass().getResourceAsStream("images/showers.png"));
+            Image showers = new Image(getClass().getResourceAsStream("images/showerss.png"));
             Button shower = new Button("");
             shower.setGraphic(new ImageView(showers));
             shower.setStyle("-fx-background-color: transparent;");
-            gpane.add(shower, 2, 1);
+            gpane.add(shower,0,0);
+            shower.setAlignment(Pos.TOP_CENTER);
+            
+            
            }
        });
    Image image5 = new Image(getClass().getResourceAsStream("images/deathicon.png"));  
