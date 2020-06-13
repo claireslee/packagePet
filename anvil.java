@@ -49,7 +49,6 @@ public class anvil extends Application {
     double x = 300;
     double y = 300;
 
-
     @Override // Override the start method in the Application class
         public void start(Stage primaryStage) {
         StackPane sPane = new StackPane();
