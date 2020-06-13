@@ -215,11 +215,11 @@ public class maggiegivesup extends Application {
     //    Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
     //    Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png"));
         ImageView doghat = new ImageView("images/dog-hat.png");
-        ImageView dogglasseshat = new ImageView("images/dog-glasses,hat.png");
-        ImageView dogglassesneck = new ImageView("images/dog-glasses,necklace.png");
-        ImageView dogglassesneckhat = new ImageView("images/dog-glasses,necklace,hat.png");
+        ImageView dogglasseshat = new ImageView("images/dog-glasses-hat.png");
+        ImageView dogglassesneck = new ImageView("images/dog-glasses-necklace.png");
+        ImageView dogglassesneckhat = new ImageView("images/dog-glasses-necklace-hat.png");
         ImageView dogglasses = new ImageView("images/dog-glasses.png");
-        ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
+        ImageView dogneckhat = new ImageView("images/dog-necklace-hat.png");
         ImageView dogneck = new ImageView("images/dog-necklace.png");
         Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
         Image resetone = new Image(getClass().getResourceAsStream("images/reset.jpg")); 
@@ -632,25 +632,14 @@ public class maggiegivesup extends Application {
                         bp.getChildren().addAll(path, anvil);
                         bp.setTranslateX(1);
                         bp.setTranslateY(1);
-                        bp.setOnMouseClicked(me -> 
-                                    {
+                        
                                         Animation.Status status = anim.getStatus();
-                                        if (status == Animation.Status.RUNNING &&
-                                            status != Animation.Status.PAUSED)
-                                            anim.pause();
-                                        else
                                             anim.play();
-                                    });
-
+                                   
              } 
          
        });
                         vPause.play();
-
- 
-                        
-                        
- 
              } 
          
        });
