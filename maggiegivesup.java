@@ -119,7 +119,12 @@ public class maggiegivesup extends Application {
        r5.setStroke(Color.BLACK);
        r5.setFill(Color.WHITE);
        Label l1 = new Label("Hunger");
+       l1.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
+        l1.setTextFill(Color.BLACK);
+
        Label l2 = new Label("Cleanliness");
+       l2.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
+        l2.setTextFill(Color.BLACK);
       
        sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
        StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
@@ -137,9 +142,44 @@ public class maggiegivesup extends Application {
            }
       
            else {
+            //x-=10;
+            //r1.setHeight(x);
             gpane.add(deaddog, 1, 1);
             gpane.getChildren().remove(dog);
-           }
+            PauseTransition pause = new PauseTransition(
+                Duration.seconds(3) 
+            );
+            pause.setOnFinished(
+                event -> {
+                Rectangle blackrect = new Rectangle(2000, 2000);
+                blackrect.setFill(Color.BLACK);
+                sPane.getChildren().add(blackrect);
+
+                GridPane dgrid = new GridPane();
+                sPane.getChildren().add(dgrid);
+                dgrid.setAlignment(Pos.CENTER);
+
+                Label deathmsg = new Label("YOU HAVE STARVED TO DEATH!");
+                deathmsg.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+                deathmsg.setTextFill(Color.RED);
+                dgrid.add(deathmsg, 1, 1);
+
+                Button deadbt = new Button("Press to retry!");
+                dgrid.add(deadbt, 1, 2);
+                deadbt.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                    gpane.add(dog, 1, 1);
+                    gpane.getChildren().remove(deaddog);
+                    sPane.getChildren().remove(dgrid);
+                    sPane.getChildren().remove(blackrect);
+                    x+=300;
+                    r1.setHeight(x);
+                }
+                });
+            });
+            pause.play();
+    }
+    
           
            if (r4.getHeight() != 0) {
                y-=5;
@@ -635,11 +675,84 @@ public class maggiegivesup extends Application {
                         
                                         Animation.Status status = anim.getStatus();
                                             anim.play();
+                        PauseTransition yes = new PauseTransition(
+                        Duration.seconds(4) 
+                        );
+                        yes.setOnFinished(
+                
+                        event -> {
+                            
+                            bp.getChildren().remove(anvil);
+                       
+                        });
+                        yes.play();
+                        
+                                            
                                    
              } 
+             
+            
          
        });
                         vPause.play();
+                        
+                        PauseTransition no = new PauseTransition(
+                            Duration.seconds(4) 
+                        );
+                        no.setOnFinished(
+                
+                        event -> {
+                            gpane.add(deaddog, 1, 1);
+                            gpane.getChildren().remove(dog);
+                       
+                        });
+                        no.play();
+                        
+            PauseTransition pause = new PauseTransition(
+                Duration.seconds(5) 
+            );
+            pause.setOnFinished(
+                
+                event -> {
+                    
+                Rectangle blackrect = new Rectangle(2000, 2000);
+                blackrect.setFill(Color.BLACK);
+                sPane.getChildren().add(blackrect);
+
+                GridPane dgrid = new GridPane();
+                sPane.getChildren().add(dgrid);
+                dgrid.setAlignment(Pos.CENTER);
+
+                Label deathmsg = new Label("HAHAH GET IT PACKAGE PET!");
+                deathmsg.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+                deathmsg.setTextFill(Color.RED);
+                dgrid.add(deathmsg, 1, 1);
+                Label deathmsgt = new Label("surprise! you died. sorry :(");
+                deathmsgt.setFont(Font.font("Verdana", FontWeight.BOLD, 50));
+                deathmsgt.setTextFill(Color.RED);
+                dgrid.add(deathmsgt, 1, 2);
+                Image gift = new Image("images/gift.png");
+                Label present = new Label("");
+                present.setGraphic(new ImageView(gift));
+                present.setStyle("-fx-background-color: transparent;");
+                dgrid.add(present, 1, 4);
+
+                Button deadbt = new Button("Press to replay!");
+                dgrid.add(deadbt, 1, 3);
+                deadbt.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                    gpane.add(dog, 1, 1);
+                    gpane.getChildren().removeAll(deaddog, present);
+                    sPane.getChildren().remove(dgrid);
+                    sPane.getChildren().remove(blackrect);
+                    
+                    r1.setHeight(300);
+                    r4.setHeight(300);
+                }
+                });
+            });
+            pause.play();
+                        
              } 
          
        });
