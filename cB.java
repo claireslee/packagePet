@@ -440,7 +440,6 @@ public class cB extends Application {
        ball.setGraphic(new ImageView(image3));
        ball.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
-               
                System.out.println("Accepted");
                
                 Circle circle = new Circle(); 
@@ -496,13 +495,13 @@ public class cB extends Application {
 
                     }
                 });
-                Button exit = new Button("");
-               exit.setGraphic(new ImageView(exitone));
-               exit.setStyle("-fx-background-color: transparent;");
-               exit.setOnAction(new EventHandler<ActionEvent>() {
+                Button exittwo = new Button("");
+               exittwo.setGraphic(new ImageView(exitone));
+               exittwo.setStyle("-fx-background-color: transparent;");
+               exittwo.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
-                    bp.getChildren().removeAll(circle, path, exit);
+                    bp.getChildren().removeAll(circle, path, exittwo);
                     gpane.getChildren().removeAll(play);
 
 
@@ -510,11 +509,11 @@ public class cB extends Application {
                 }
             });
 
-                Group root = new Group(circle);
-                Scene scene = new Scene(root, 600, 300);   
-                bp.getChildren().addAll(circle, path, exit);
+                // Group root = new Group(circle);
+                // Scene scene = new Scene(root, 600, 300);   
+                bp.getChildren().addAll(circle, path, exittwo);
                 gpane.getChildren().addAll(play);
-                bp.setTop(exit);
+                bp.setTop(exittwo);
                 
              } 
          
