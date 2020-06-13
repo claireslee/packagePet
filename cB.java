@@ -746,8 +746,10 @@ public class cB extends Application {
                     sPane.getChildren().remove(dgrid);
                     sPane.getChildren().remove(blackrect);
                     
-                    r1.setHeight(300);
-                    r4.setHeight(300);
+                    x = 300;
+                    y = 300;
+                    r1.setHeight(x);
+                    r4.setHeight(y);
                 }
                 });
             });
