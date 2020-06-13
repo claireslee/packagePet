@@ -2,6 +2,7 @@ import javafx.animation.Animation;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.util.Duration;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -118,7 +121,7 @@ public class food extends Application {
         // Create a handler for changing text
         EventHandler<ActionEvent> eventHandler = e -> {
             if (r1.getHeight() > 0) {
-                x-=10; //x=10
+                x-=150; //x=10
                 r1.setHeight(x);
             }
     
@@ -127,7 +130,39 @@ public class food extends Application {
                 //r1.setHeight(x);
                 gpane.add(deaddog, 1, 1);
                 gpane.getChildren().remove(dog);
-            }
+                PauseTransition pause = new PauseTransition(
+                    Duration.seconds(3) 
+                );
+                pause.setOnFinished(
+                    event -> {
+                    Rectangle blackrect = new Rectangle(2000, 2000);
+                    blackrect.setFill(Color.BLACK);
+                    sPane.getChildren().add(blackrect);
+
+                    GridPane dgrid = new GridPane();
+                    sPane.getChildren().add(dgrid);
+                    dgrid.setAlignment(Pos.CENTER);
+
+                    Label deathmsg = new Label("YOU HAVE STARVED TO DEATH!");
+                    deathmsg.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+                    deathmsg.setTextFill(Color.RED);
+                    dgrid.add(deathmsg, 1, 1);
+
+                    Button deadbt = new Button("Press to retry!");
+                    dgrid.add(deadbt, 1, 2);
+                    deadbt.setOnAction(new EventHandler<ActionEvent>() {
+                        @Override public void handle(ActionEvent e) {
+                        gpane.add(dog, 1, 1);
+                        gpane.getChildren().remove(deaddog);
+                        sPane.getChildren().remove(dgrid);
+                        sPane.getChildren().remove(blackrect);
+                        x+=300;
+                        r1.setHeight(x);
+                    }
+                    });
+                });
+                pause.play();
+        }
         
             if (r4.getHeight() != 0) {
                 y-=5; //x=5
