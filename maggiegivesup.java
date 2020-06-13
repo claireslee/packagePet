@@ -1,4 +1,5 @@
 import javafx.animation.Animation;
+import javafx.animation.Interpolator;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.animation.KeyFrame;
@@ -46,7 +47,7 @@ import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 
-public class cB extends Application {
+public class maggiegivesup extends Application {
    double x = 300;
    double y = 300;
    boolean hatPressed = false;
@@ -214,11 +215,11 @@ public class cB extends Application {
     //    Image dogglasses = new Image(getClass().getResourceAsStream("images/dog-glasses.png")); 
     //    Image doghat = new Image(getClass().getResourceAsStream("images/dog-hat.png"));
         ImageView doghat = new ImageView("images/dog-hat.png");
-        ImageView dogglasseshat = new ImageView("images/dog-glasses-hat.png");
-        ImageView dogglassesneck = new ImageView("images/dog-glasses-necklace.png");
-        ImageView dogglassesneckhat = new ImageView("images/dog-glasses-necklace-hat.png");
+        ImageView dogglasseshat = new ImageView("images/dog-glasses,hat.png");
+        ImageView dogglassesneck = new ImageView("images/dog-glasses,necklace.png");
+        ImageView dogglassesneckhat = new ImageView("images/dog-glasses,necklace,hat.png");
         ImageView dogglasses = new ImageView("images/dog-glasses.png");
-        ImageView dogneckhat = new ImageView("images/dog-necklace-hat.png");
+        ImageView dogneckhat = new ImageView("images/dog-necklace,hat.png");
         ImageView dogneck = new ImageView("images/dog-necklace.png");
         Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
         Image resetone = new Image(getClass().getResourceAsStream("images/reset.jpg")); 
@@ -589,51 +590,66 @@ public class cB extends Application {
                         PauseTransition vPause = new PauseTransition(
                         Duration.seconds(2)
                         );
-                        vPause.setOnFinished(
-                        event -> rect.setVisible(false)
-                        );
-                        vPause.play();
-                        // Timer.sleep(5000);
-                        // lookup.setText(null);
-
- 
-                        Image anvil = new Image("images/anvil.png");
-                        ImageView anvilview = new ImageView();
- 
- 
+                        
+                        vPause.setOnFinished(new EventHandler<ActionEvent>() {
+                            @Override public void handle(ActionEvent e) {
+                        rect.setVisible(false);
+                        ImageView anvil = new ImageView();
+                        anvil.setImage(new Image("images/anvil.png"));
+                        anvil.setX(-anvil.getImage().getWidth() / 10);
+                        anvil.setY(1-anvil.getImage().getHeight());
                     
                         Path path = new Path();
- 
+
                         MoveTo moveTo = new MoveTo();
-                        moveTo.setX(100.0f);
-                        moveTo.setY(200.0f);
- 
+                        moveTo.setX(600.0f);
+                        moveTo.setY(0.0f);
+
                         CubicCurveTo cubicTo = new CubicCurveTo();
-                        cubicTo.setControlX1(200.0f);
-                        cubicTo.setControlY1(100.0f);
-                        cubicTo.setControlX2(300.0f);
+                        cubicTo.setControlX1(600.0f);
+                        cubicTo.setControlY1(50.0f);
+                        cubicTo.setControlX2(600.0f);
                         cubicTo.setControlY2(100.0f);
                         cubicTo.setX(600.0f);
-                        cubicTo.setY(185.0f);
- 
+                        cubicTo.setY(175.0f);
+
                         path.getElements().add(moveTo);
                         path.getElements().add(cubicTo);
                         path.setOpacity(0.0);
-                        PathTransition pathTransition = new PathTransition();  
-                        pathTransition.setDuration(Duration.millis(1000)); 
+                        // road.getElements().addAll(path);
                         
-                        pathTransition.setNode(anvilview); 
-                        // pathTransition.setPath(path);  
                         
-                        pathTransition.setOrientation(PathTransition.OrientationType.
-                        ORTHOGONAL_TO_TANGENT); 
-                        pathTransition.setCycleCount(2); 
-                        pathTransition.setAutoReverse(true);     
+
+                        PathTransition anim = new PathTransition();
+                        anim.setNode(anvil);
+                        anim.setPath(path);
+                        anim.setOrientation(OrientationType.NONE);
+                        anim.setInterpolator(Interpolator.LINEAR);
+                        anim.setDuration(new Duration(1000));
+                        anim.setCycleCount(1);
+
+                        // Group root = new Group();
+                        bp.getChildren().addAll(path, anvil);
+                        bp.setTranslateX(1);
+                        bp.setTranslateY(1);
+                        bp.setOnMouseClicked(me -> 
+                                    {
+                                        Animation.Status status = anim.getStatus();
+                                        if (status == Animation.Status.RUNNING &&
+                                            status != Animation.Status.PAUSED)
+                                            anim.pause();
+                                        else
+                                            anim.play();
+                                    });
+
+             } 
+         
+       });
+                        vPause.play();
+
  
-                        // Group root = new Group(circle);
-                        // Scene scene = new Scene(root, 600, 300);   
-                        // bp.getChildren().addAll(circle, path);
-                        // gpane.getChildren().add(play);
+                        
+                        
  
              } 
          
