@@ -955,10 +955,410 @@ public class cB extends Application {
                             dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
                             dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
                         }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == true && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogsunglassesheart, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogsunglassespearl, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == true &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogglassesscarf, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == true &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogsunglassesscarf, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == true && tophatPressed == false){
+                            gpane.add(dogglassestie, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == true && tophatPressed == false){
+                            gpane.add(dogsunglassestie, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == true && bowPressed == false &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
+                            gpane.add(dogbaseballglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == true && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogbaseballsunglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == true &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogbowglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogbowsunglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == true && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(doghatsunglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogflowerglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogflowersunglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatsunglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatglasses, 1, 1);
+                            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
+                            dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                            dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                            dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                            dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                            dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                            dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                            dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                            dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                            dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                            dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghatbowtie, doghatglassesbowtie, doghat,
+                            doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                            doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                            dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                            dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                            dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                            dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                            dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglassesbowtie, dogtophatglassesheart,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+                        }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == true && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatsunglasses, 1, 1);
                             gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat, dogneckhat,
                             dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
                             dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
@@ -977,7 +1377,7 @@ public class cB extends Application {
                             dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
                             dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
                             dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
-                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                            dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf,
                             dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
                         }
 
