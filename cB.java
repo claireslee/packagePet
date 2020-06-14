@@ -53,6 +53,11 @@ public class cB extends Application {
    boolean hatPressed = false;
    boolean necklacePressed = false;
    boolean glassesPressed = false;
+   boolean baseballPressed = false;
+   boolean bowPressed = false;
+   boolean bowtiePressed = false;
+   
+
    boolean playPressed = false;
 
   
@@ -242,14 +247,12 @@ public class cB extends Application {
     Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpg")); 
         Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
        Image glasses = new Image(getClass().getResourceAsStream("images/glasses.png")); 
-        // Image headband2 = new Image(getClass().getResourceAsStream("images/headband.png")); 
         Image necklace1 = new Image(getClass().getResourceAsStream("images/heartnecklace.jpg")); 
        Image necklace2 = new Image(getClass().getResourceAsStream("images/pearlnecklace.jpg")); 
         Image scarf = new Image(getClass().getResourceAsStream("images/scarf.jpg")); 
         Image sunglasses = new Image(getClass().getResourceAsStream("images/sunglasses.png")); 
         Image tie = new Image(getClass().getResourceAsStream("images/tie.png")); 
      Image hat4 = new Image(getClass().getResourceAsStream("images/tophat.jpg")); 
-     
      Image exitone = new Image(getClass().getResourceAsStream("images/exit.jpg")); 
      Image resetone = new Image(getClass().getResourceAsStream("images/reset.jpg")); 
         ImageView doghat = new ImageView("images/dog-hat.png");
@@ -269,10 +272,10 @@ public class cB extends Application {
         ImageView dogbaseballheart = new ImageView("images/dog-baseball-heart.png");
         ImageView dogbaseballpearl = new ImageView("images/dog-baseball-pearl.png");
         ImageView dogbaseballscarf = new ImageView("images/dog-baseball-scarf.png");
-        //ImageView dogbaseballsunglassesbowtie = new ImageView("images/dog-baseball-sunglasses-bowtie.png");
+        ImageView dogbaseballsunglassesbowtie = new ImageView("images/dog-baseball-sunglasses-bowtie.png");
         ImageView dogbaseballsunglassesheart = new ImageView("images/dog-baseball-sunglasses-heart.png");
         ImageView dogbaseballsunglassespearl = new ImageView("images/dog-baseball-sunglasses-pearl.png");
-        //ImageView dogbaseballsunglassesscarf = new ImageView("images/dog-baseball-sunglasses-scarf.png");
+        ImageView dogbaseballsunglassesscarf = new ImageView("images/dog-baseball-sunglasses-scarf.png");
         ImageView dogbaseballsunglassestie = new ImageView("images/dog-baseball-sunglasses-tie.png");
         ImageView dogbaseballsunglasses = new ImageView("images/dog-baseball-sunglasses.png");
         ImageView dogbaseballtie = new ImageView("images/dog-baseball-tie.png");
@@ -290,6 +293,7 @@ public class cB extends Application {
         ImageView dogbowsunglassesbowtie = new ImageView("images/dog-bow-sunglasses-bowtie.png");
         ImageView dogbowsunglassesheart = new ImageView("images/dog-bow-sunglasses-heart.png");
         ImageView dogbowsunglassespearl = new ImageView("images/dog-bow-sunglasses-pearl.png");
+        //ImageView dogbowsunglassesscarf = new ImageView("images/dog-bow-sunglasses-scarf.png");
         ImageView dogbowsunglassestie = new ImageView("images/dog-bow-sunglasses-tie.png");
         ImageView dogbowsunglasses = new ImageView("images/dog-bow-sunglasses.png");
         ImageView dogbowTie = new ImageView("images/dog-bow-tie.png");
@@ -315,6 +319,7 @@ public class cB extends Application {
         ImageView dogflower = new ImageView("images/dog-flower.png");
         ImageView dogglassesbowtie = new ImageView("images/dog-glasses-bowtie.png");
         ImageView dogglassesheart = new ImageView("images/dog-glasses-heart.png");
+        //ImageView dogglassesscarf = new ImageView("images/dog-glasses-scarf.png");
         ImageView dogglassestie = new ImageView("images/dog-glasses-tie.png");
         ImageView doghatbowtie = new ImageView("images/dog-hat-bowtie.png");
         ImageView doghatglassesbowtie = new ImageView("images/dog-hat-glasses-bowtie.png");
@@ -344,8 +349,8 @@ public class cB extends Application {
         ImageView dogprettyhatsunglassesbowtie = new ImageView("images/dog-prettyhat-sunglasses-bowtie.png");
         ImageView dogprettyhatsunglassesheart = new ImageView("images/dog-prettyhat-sunglasses-heart.png");
         ImageView dogprettyhatsunglassespearl = new ImageView("images/dog-prettyhat-sunglasses-pearl.png");
-        //ImageView dogprettyhatsunglassesscarf = new ImageView("images/dog-prettyhat-sunglasses-scarf.png");
-        //ImageView dogprettyhatsunglassestie = new ImageView("images/dog-prettyhat-sunglasses-tie.png");
+        ImageView dogprettyhatsunglassesscarf = new ImageView("images/dog-prettyhat-sunglasses-scarf.png");
+        ImageView dogprettyhatsunglassestie = new ImageView("images/dog-prettyhat-sunglasses-tie.png");
         ImageView dogprettyhatsunglasses = new ImageView("images/dog-prettyhat-sunglasses.png");
         ImageView dogprettyhattie = new ImageView("images/dog-prettyhat-tie.png");
         ImageView dogprettyhat = new ImageView("images/dog-prettyhat.png");
@@ -370,8 +375,8 @@ public class cB extends Application {
         ImageView dogtophatsunglassesbowtie = new ImageView("images/dog-tophat-sunglasses-bowtie.png");
         ImageView dogtophatsunglassesheart = new ImageView("images/dog-tophat-sunglasses-heart.png");
         ImageView dogtophatsunglassespearl = new ImageView("images/dog-tophat-sunglasses-pearl.png");
-        //ImageView dogtophatsunglassesscarf = new ImageView("images/dog-tophat-sunglasses-scarf.png");
-        //ImageView dogtophatsunglassestie = new ImageView("images/dog-tophat-sunglasses-tie.png");
+        ImageView dogtophatsunglassesscarf = new ImageView("images/dog-tophat-sunglasses-scarf.png");
+        ImageView dogtophatsunglassestie = new ImageView("images/dog-tophat-sunglasses-tie.png");
         ImageView dogtophatsunglasses = new ImageView("images/dog-tophat-sunglasses.png");
         ImageView dogtophattie = new ImageView("images/dog-tophat-tie.png");
         ImageView dogtophat = new ImageView("images/dog-tophat.png");
