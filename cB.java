@@ -695,6 +695,76 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogflowerbowtie, 1, 1);
                             }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == true && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogflowerheart, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogflowerpearl, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == false && prettyhatPressed == false && scarfPressed == true &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogflowerscarf, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == true && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == true && tophatPressed == false){
+                            gpane.add(dogflowertie, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatbowtie, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == true && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatheart, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatpearl, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == true &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
+                            gpane.add(dogprettyhatscarf, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == true && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == true && tophatPressed == false){
+                            gpane.add(dogprettyhattie, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatbowtie, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == true && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatheart, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatpearl, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == true &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == true){
+                            gpane.add(dogtophatscarf, 1, 1);
+                            }
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == true && tophatPressed == true){
+                            gpane.add(dogtophattie, 1, 1);
+                            }
                         
 
 
