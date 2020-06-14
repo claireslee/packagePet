@@ -480,7 +480,9 @@ public class cB extends Application {
                             dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
                             dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
                         }
-                        if (hatPressed == true && glassesPressed == true && necklacePressed == true){
+                        if (hatPressed == true && glassesPressed == true && necklacePressed == true && baseballPressed == false && bowPressed == false &&
+                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
+                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogglassesneckhat, 1, 1);
                             gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat, 
                             dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
