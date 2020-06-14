@@ -9066,13 +9066,40 @@ public class cB extends Application {
                  glassesPressed = false;
                  necklacePressed = false;
                  hatPressed = false;
-                 System.out.println("Accepted");
+                 baseballPressed = false;
+                 bowPressed = false;
+                 flowerPressed = false;
+                 heartPressed = false;
+                 prettyhatPressed = false;
+                 scarfPressed = false;
+                 sunglassesPressed = false;
+                 tiePressed = false;
+                 tophatPressed = false;
             
-                 gpane.getChildren().removeAll(doghat, dogneck, dogglasses, dogglasseshat, dogglassesneck, dogglassesneckhat, dogneckhat);
+                 gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat, 
+                 dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                 dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                 dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                 dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                 dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                 dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                 dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                 dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                 dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                 dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghat, doghatbowtie, doghatglassesbowtie,
+                 doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                 doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                 dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                 dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                 dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                 dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                 dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                 dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                 dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
                       gpane.add(dog, 1, 1);
 
-                cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo);
-                cBox.getChildren().addAll(glassesone, hatthree, necklacetwo);
+                cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, necklaceone, glassestwo, bowone, bowtieone, scarfone, tieone, hatone, hattwo, hatfour, headbandone);
+                cBox.getChildren().addAll(glassesone, hatthree, necklacetwo, necklaceone, glassestwo, bowone, bowtieone, scarfone, tieone, hatone, hattwo, hatfour, headbandone);
                 
 
                 } 
@@ -9085,7 +9112,7 @@ public class cB extends Application {
                exit.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     System.out.println("Accepted");
-                    cBox.getChildren().removeAll(glassesone, hatthree, necklacetwo, exit, reset);
+                    cBox.getChildren().removeAll(exit, reset, glassesone, hatthree, necklacetwo, necklaceone, glassestwo, bowone, bowtieone, scarfone, tieone, hatone, hattwo, hatfour, headbandone);
 
                 
                 }
