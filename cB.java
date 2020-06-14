@@ -395,15 +395,6 @@ public class cB extends Application {
        clothes.setOnAction(new EventHandler<ActionEvent>() {
            @Override public void handle(ActionEvent e) {
             HBox cBox = new HBox();
-            // Button hatone = new Button("");
-            // hatone.setGraphic(new ImageView(hat1));
-            // hatone.setOnAction(new EventHandler<ActionEvent>() {
-            //     @Override public void handle(ActionEvent e) {
-            //         System.out.println("Accepted");
-            //     }
-            // });
-                // Button hattwo = new Button("");
-                // hattwo.setGraphic(new ImageView(hat2));
                 
                 Button hatthree = new Button("");
                 hatthree.setGraphic(new ImageView(hat3));
@@ -413,8 +404,32 @@ public class cB extends Application {
                         System.out.println("Accepted");
                         cBox.getChildren().remove(hatthree);
                         hatPressed = true;
+                        baseballPressed = false;
+                        bowPressed = false;
+                        flowerPressed = false;
+                        prettyhatPressed = false;
+                        tophatPressed = false;
                         
-                        gpane.getChildren().remove(dog);
+                        gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat, 
+                        dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                        dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                        dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                        dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                        dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                        dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                        dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                        dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                        dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                        dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghat, doghatbowtie, doghatglassesbowtie,
+                        doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                        doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                        dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                        dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                        dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                        dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                        dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                        dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                        dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
                         if (hatPressed == true && glassesPressed == false && necklacePressed == false){
                             gpane.add(doghat, 1, 1);
                             gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
@@ -449,15 +464,6 @@ public class cB extends Application {
                     }
                 });
                 
-            // Button hatfour = new Button("");
-            // hatfour.setGraphic(new ImageView(hat4));
-            // hatfour.setOnAction(new EventHandler<ActionEvent>() {
-            //     @Override public void handle(ActionEvent e) {
-            //         System.out.println("Accepted");
-            //     }
-            // });
-            //    Button necklaceone = new Button("");
-            //    necklaceone.setGraphic(new ImageView(necklace1));
                Button necklacetwo = new Button("");
                necklacetwo.setGraphic(new ImageView(necklace2));
                necklacetwo.setOnAction(new EventHandler<ActionEvent>() {
@@ -497,10 +503,6 @@ public class cB extends Application {
 
                 }
             });
-            //    Button headbandone = new Button("");
-            //    headbandone.setGraphic(new ImageView(headband1));
-            //    Button headbandtwo = new Button("");
-            //    headbandtwo.setGraphic(new ImageView(headband2));
                 Button glassesone = new Button("");
                glassesone.setGraphic(new ImageView(glasses));
                glassesone.setOnAction(new EventHandler<ActionEvent>() {
@@ -541,6 +543,7 @@ public class cB extends Application {
                     
                 }
             });
+            
 
 
 
