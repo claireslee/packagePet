@@ -293,7 +293,7 @@ public class cB extends Application {
         ImageView dogbowsunglassesbowtie = new ImageView("images/dog-bow-sunglasses-bowtie.png");
         ImageView dogbowsunglassesheart = new ImageView("images/dog-bow-sunglasses-heart.png");
         ImageView dogbowsunglassespearl = new ImageView("images/dog-bow-sunglasses-pearl.png");
-        //ImageView dogbowsunglassesscarf = new ImageView("images/dog-bow-sunglasses-scarf.png");
+        ImageView dogbowsunglassesscarf = new ImageView("images/dog-bow-sunglasses-scarf.png");
         ImageView dogbowsunglassestie = new ImageView("images/dog-bow-sunglasses-tie.png");
         ImageView dogbowsunglasses = new ImageView("images/dog-bow-sunglasses.png");
         ImageView dogbowTie = new ImageView("images/dog-bow-tie.png");
@@ -319,7 +319,7 @@ public class cB extends Application {
         ImageView dogflower = new ImageView("images/dog-flower.png");
         ImageView dogglassesbowtie = new ImageView("images/dog-glasses-bowtie.png");
         ImageView dogglassesheart = new ImageView("images/dog-glasses-heart.png");
-        //ImageView dogglassesscarf = new ImageView("images/dog-glasses-scarf.png");
+        ImageView dogglassesscarf = new ImageView("images/dog-glasses-scarf.png");
         ImageView dogglassestie = new ImageView("images/dog-glasses-tie.png");
         ImageView doghatbowtie = new ImageView("images/dog-hat-bowtie.png");
         ImageView doghatglassesbowtie = new ImageView("images/dog-hat-glasses-bowtie.png");
