@@ -56,6 +56,13 @@ public class cB extends Application {
    boolean baseballPressed = false;
    boolean bowPressed = false;
    boolean bowtiePressed = false;
+   boolean flowerPressed = false;
+   boolean heartPressed = false;
+   boolean prettyhatPressed = false;
+   boolean scarfPressed = false;
+   boolean sunglassesPressed = false;
+   boolean tiePressed = false;
+   boolean tophatPressed = false;
    
 
    boolean playPressed = false;
