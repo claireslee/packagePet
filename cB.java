@@ -617,7 +617,9 @@ public class cB extends Application {
                 @Override public void handle(ActionEvent e) {
                     necklacePressed = true;
                     bowtiePressed = false;
-                    
+                    heartPressed = false;
+                    scarfPressed = false;
+                    tiePressed = false;
 
                     System.out.println("Accepted");
                     cBox.getChildren().remove(necklacetwo);
@@ -658,6 +660,8 @@ public class cB extends Application {
                glassesone.setOnAction(new EventHandler<ActionEvent>() {
                 @Override public void handle(ActionEvent e) {
                     glassesPressed = true;
+                    sunglassesPressed = false;
+
                     System.out.println("Accepted");
                     cBox.getChildren().remove(glassesone);
                     gpane.getChildren().remove(dog);
