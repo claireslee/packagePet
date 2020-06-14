@@ -250,7 +250,7 @@ public class cB extends Application {
        Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
       Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
         Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
-        Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.jpg")); 
+        Image bowtie = new Image(getClass().getResourceAsStream("images/bowtie.png")); 
     Image hat3 = new Image(getClass().getResourceAsStream("images/cowboyhat.jpg")); 
         Image headband1 = new Image(getClass().getResourceAsStream("images/flowerheadband.jpg")); 
        Image glasses = new Image(getClass().getResourceAsStream("images/glasses.png")); 
@@ -514,11 +514,6 @@ public class cB extends Application {
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
-                            }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
                             }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
@@ -1185,11 +1180,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -1854,11 +1844,6 @@ public class cB extends Application {
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
-                            }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
                             }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
@@ -2525,11 +2510,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -3194,11 +3174,6 @@ public class cB extends Application {
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
-                            }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
                             }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
@@ -3865,11 +3840,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -4532,11 +4502,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -5195,11 +5160,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -5857,11 +5817,6 @@ public class cB extends Application {
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
-                            }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
                             }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
@@ -6522,11 +6477,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -7185,11 +7135,6 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                             gpane.add(dogtophat, 1, 1);
                             }
-                        if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                        bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                        sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                            gpane.add(dogneckhat, 1, 1);
-                            }
                         if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                         bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -7846,11 +7791,6 @@ public class cB extends Application {
                     sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                         gpane.add(dogtophat, 1, 1);
                         }
-                    if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                    bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                    sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                        gpane.add(dogneckhat, 1, 1);
-                        }
                     if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                     bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                     sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -8506,11 +8446,6 @@ public class cB extends Application {
                  sunglassesPressed == false && tiePressed == false && tophatPressed == true){
                      gpane.add(dogtophat, 1, 1);
                      }
-                 if (hatPressed == true && glassesPressed == false && necklacePressed == true && baseballPressed == false && bowPressed == false &&
-                 bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
-                 sunglassesPressed == false && tiePressed == false && tophatPressed == false){
-                     gpane.add(dogneckhat, 1, 1);
-                     }
                  if (hatPressed == false && glassesPressed == true && necklacePressed == false && baseballPressed == false && bowPressed == false &&
                  bowtiePressed == true && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                  sunglassesPressed == false && tiePressed == false && tophatPressed == false){
@@ -9135,7 +9070,7 @@ public class cB extends Application {
             //    Button scarfone = new Button("");
             //    scarfone.setGraphic(new ImageView(scarf));
             //    cBox.getChildren().addAll(scarfone, bowone, bowtieone, tieone, sunglassesone, glassesone, headbandone, headbandtwo, necklaceone, necklacetwo, hatfour, hatthree, hattwo, hatone);
-                cBox.getChildren().addAll(glassesone, necklacetwo, hatthree, exit, reset);
+                cBox.getChildren().addAll(exit, reset, glassesone, hatthree, necklacetwo, necklaceone, glassestwo, bowone, bowtieone, scarfone, tieone, hatone, hattwo, hatfour, headbandone);
                 hBox.getChildren().add(cBox);
 
                 bp.setTop(cBox);
