@@ -288,36 +288,31 @@ public class maggiegivesup extends Application {
 
                         System.out.println("Accepted");
                         cBox.getChildren().remove(hatthree);
+                        gpane.getChildren().removeAll(dog, dogglasses, doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                         hatPressed = true;
                         
                         gpane.getChildren().remove(dog);
                         if (hatPressed == true && glassesPressed == false && necklacePressed == false){
                             gpane.add(doghat, 1, 1);
-                            gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                            
                         }
                         if (hatPressed == true && glassesPressed == true && necklacePressed == false){
                             gpane.add(dogglasseshat, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
                         }
                         if (hatPressed == true && glassesPressed == true && necklacePressed == true){
                             gpane.add(dogglassesneckhat, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
                         }
                         if (hatPressed == true && glassesPressed == false && necklacePressed == true){
                             gpane.add(dogneckhat, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
                         }
                         if (necklacePressed == true && hatPressed == false && glassesPressed == false){
                             gpane.add(dogneck, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                         }
                         if (necklacePressed == true && hatPressed == false && glassesPressed == true){
                             gpane.add(dogglassesneck, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
                         }
                         if (glassesPressed == true && hatPressed == false && necklacePressed == false){
                             gpane.add(dogglasses, 1, 1);
-                            gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                         }
 
 
@@ -341,34 +336,27 @@ public class maggiegivesup extends Application {
                     necklacePressed = true;
                     System.out.println("Accepted");
                     cBox.getChildren().remove(necklacetwo);
-                    gpane.getChildren().remove(dog);
+                    gpane.getChildren().removeAll(dog, dogglasses, doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     if (hatPressed == true && glassesPressed == false && necklacePressed == false){
                         gpane.add(doghat, 1, 1);
-                        gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (hatPressed == true && glassesPressed == true && necklacePressed == false){
                         gpane.add(dogglasseshat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
                     }
                     if (hatPressed == true && glassesPressed == true && necklacePressed == true){
                         gpane.add(dogglassesneckhat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
                     }
                     if (hatPressed == true && glassesPressed == false && necklacePressed == true){
                         gpane.add(dogneckhat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (necklacePressed == true && hatPressed == false && glassesPressed == false){
                         gpane.add(dogneck, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (necklacePressed == true && hatPressed == false && glassesPressed == true){
                         gpane.add(dogglassesneck, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
                     }
                     if (glassesPressed == true && hatPressed == false && necklacePressed == false){
                         gpane.add(dogglasses, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
 
                 }
@@ -384,34 +372,28 @@ public class maggiegivesup extends Application {
                     glassesPressed = true;
                     System.out.println("Accepted");
                     cBox.getChildren().remove(glassesone);
-                    gpane.getChildren().remove(dog);
+                    gpane.getChildren().removeAll(dog, doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
+                    
                     if (hatPressed == true && glassesPressed == false && necklacePressed == false){
                         gpane.add(doghat, 1, 1);
-                        gpane.getChildren().removeAll(dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (hatPressed == true && glassesPressed == true && necklacePressed == false){
                         gpane.add(dogglasseshat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat);
                     }
                     if (hatPressed == true && glassesPressed == true && necklacePressed == true){
                         gpane.add(dogglassesneckhat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglasseshat);
                     }
                     if (hatPressed == true && glassesPressed == false && necklacePressed == true){
                         gpane.add(dogneckhat, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (necklacePressed == true && hatPressed == false && glassesPressed == false){
                         gpane.add(dogneck, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     if (necklacePressed == true && hatPressed == false && glassesPressed == true){
                         gpane.add(dogglassesneck, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogglasses, dogneck, dogneckhat, dogglassesneckhat, dogglasseshat);
                     }
                     if (glassesPressed == true && hatPressed == false && necklacePressed == false){
                         gpane.add(dogglasses, 1, 1);
-                        gpane.getChildren().removeAll(doghat, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat);
                     }
                     
                     
