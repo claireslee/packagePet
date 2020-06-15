@@ -67,186 +67,8 @@ public class cB extends Application {
 
    boolean playPressed = false;
 
-  
-   @Override // Override the start method in the Application class
-       public void start(Stage primaryStage) {
-       StackPane sPane = new StackPane();
-       Image bg = new Image("images/backgroundimage.jpg");
-    //    ImageView pet = new ImageView();
-    //    pet.setImage(dog);
-       ImageView park = new ImageView();
-       park.setImage(bg);
-      
-       BorderPane bp = new BorderPane();
- 
-       HBox hBox = new HBox(10);
-       // VBox vBox = new VBox();
 
-       sPane.getChildren().add(park);
-       sPane.getChildren().add(bp);
-       
-     
-       hBox.setAlignment(Pos.BOTTOM_CENTER);
-       // vBox.setPadding(new Insets(20, 50, 0, 0));
-       // vBox.setAlignment(Pos.BOTTOM_CENTER);
-    //     @FXML
-    //     private void doggie(ActionEvent event) throws Exception {
-    //         GridPane gpane = new GridPane();
-    //         gpane.getChildren().add(pet);
-    //         Node source = (Node)event.getSource();
-    //         Integer colIndex = GridPane.getColumnIndex(source);
-    //         Integer rowIndex = GridPane.getRowIndex(source);
-    //         GridPane.setConstraints(pet, colIndex, rowIndex);
-    //    }
-
-        GridPane gpane = new GridPane();
-        //gpane.getChildren().add(pet);
-        gpane.setPadding(new Insets(2, 2, 2, 2));
-        gpane.setAlignment(Pos.CENTER);
-        gpane.getColumnConstraints().add(new ColumnConstraints(100));
-        gpane.getColumnConstraints().add(new ColumnConstraints(450));
-        gpane.getColumnConstraints().add(new ColumnConstraints(100));
-        gpane.getRowConstraints().add(new RowConstraints(200));
-        gpane.getRowConstraints().add(new RowConstraints(300));
-        gpane.getRowConstraints().add(new RowConstraints(100));
-        // gpane.setHgap(5);
-        // gpane.setVgap(10);
-        ImageView dog = new ImageView("images/dog.png");
-        gpane.add(dog, 1, 1);
-
-        ImageView deaddog = new ImageView("images/deaddog.jpg");
- 
-       Rectangle r1 = new Rectangle(40, x);
-       r1.setStroke(Color.BLACK);
-       r1.setFill(Color.BLACK);
-       Rectangle r3 = new Rectangle(40, 300);
-       r3.setStroke(Color.BLACK);
-       r3.setFill(Color.WHITE);
-      
-       Rectangle r4 = new Rectangle(40, y);
-       r4.setStroke(Color.BLACK);
-       r4.setFill(Color.BLACK);
-      
-       Rectangle r5 = new Rectangle(40, 300);
-       r5.setStroke(Color.BLACK);
-       r5.setFill(Color.WHITE);
-       Label l1 = new Label("Hunger");
-       l1.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
-        l1.setTextFill(Color.BLACK);
-
-       Label l2 = new Label("Cleanliness");
-       l2.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
-        l2.setTextFill(Color.BLACK);
-      
-       sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
-       StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
-       StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
-       StackPane.setAlignment(r4, Pos.BOTTOM_RIGHT);
-       StackPane.setAlignment(r5, Pos.BOTTOM_RIGHT);
-      
-       StackPane.setAlignment(l1, Pos.CENTER_LEFT);
-       StackPane.setAlignment(l2, Pos.CENTER_RIGHT);
-       // Create a handler for changing text
-       EventHandler<ActionEvent> eventHandler = e -> {
-           if (r1.getHeight() != 0) {
-               x-=10;
-               r1.setHeight(x);
-           }
-      
-           else {
-            //x-=10;
-            //r1.setHeight(x);
-            gpane.add(deaddog, 1, 1);
-            gpane.getChildren().remove(dog);
-            PauseTransition pause = new PauseTransition(
-                Duration.seconds(3) 
-            );
-            pause.setOnFinished(
-                event -> {
-                Rectangle blackrect = new Rectangle(2000, 2000);
-                blackrect.setFill(Color.BLACK);
-                sPane.getChildren().add(blackrect);
-
-                GridPane dgrid = new GridPane();
-                sPane.getChildren().add(dgrid);
-                dgrid.setAlignment(Pos.CENTER);
-
-                Label deathmsg = new Label("YOU HAVE STARVED TO DEATH!");
-                deathmsg.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
-                deathmsg.setTextFill(Color.RED);
-                dgrid.add(deathmsg, 1, 1);
-
-                Button deadbt = new Button("Press to retry!");
-                dgrid.add(deadbt, 1, 2);
-                deadbt.setOnAction(new EventHandler<ActionEvent>() {
-                    @Override public void handle(ActionEvent e) {
-                    gpane.add(dog, 1, 1);
-                    gpane.getChildren().remove(deaddog);
-                    sPane.getChildren().remove(dgrid);
-                    sPane.getChildren().remove(blackrect);
-                    x+=300;
-                    r1.setHeight(x);
-                }
-                });
-            });
-            pause.play();
-    }
-    
-          
-           if (r4.getHeight() != 0) {
-               y-=5;
-               r4.setHeight(y);
-           }
-  
-           else {
-               y-=5;
-               r4.setHeight(y);
-           }
-       };
-       // Create an animation for alternating text
-       Timeline animation = new Timeline(
-           new KeyFrame(Duration.millis(5000), eventHandler));
-           animation.setCycleCount(Timeline.INDEFINITE);
-           animation.play(); // Start animation
-       // Pause and resume animation
-       sPane.setOnMouseClicked(e -> {
-           if (animation.getStatus() == Animation.Status.PAUSED) {
-               animation.play();
-           }
-      
-           else {
-           animation.pause();
-           }
-       });
- 
-       Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
-        Button food = new Button("");
-        food.setGraphic(new ImageView(image1));
-        food.setOnAction(new EventHandler<ActionEvent>() {
-            @Override public void handle(ActionEvent e) {
-                Image doggyfood = new Image("images/doggyfood.png");
-                Button foodexit = new Button("");
- 
-                foodexit.setGraphic(new ImageView(doggyfood));
-                foodexit.setStyle("-fx-background-color: transparent;");
-                gpane.add(foodexit, 1, 2);
-                foodexit.setOnAction(new EventHandler<ActionEvent>() {
-                @Override public void handle(ActionEvent e) {
-                    gpane.getChildren().removeAll(foodexit);
-                    if (x < 300) {
-                        x+=20;
-                        r1.setHeight(x);
-                    }
-
-                    else if (x == 0) {
-                        
-                    }
-                }
-            });
-        }
-        });
-  
-       Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
+   Image image2 = new Image(getClass().getResourceAsStream("images/clothesicon.png"));
        Image hat1 = new Image(getClass().getResourceAsStream("images/prettyhat.jpg")); 
       Image hat2 = new Image(getClass().getResourceAsStream("images/baseballhat.png"));
         Image bow = new Image(getClass().getResourceAsStream("images/bow.png")); 
@@ -388,6 +210,208 @@ public class cB extends Application {
         ImageView dogtophattie = new ImageView("images/dog-tophat-tie.png");
         ImageView dogtophat = new ImageView("images/dog-tophat.png");
 
+  
+   @Override // Override the start method in the Application class
+       public void start(Stage primaryStage) {
+       StackPane sPane = new StackPane();
+       Image bg = new Image("images/backgroundimage.jpg");
+    //    ImageView pet = new ImageView();
+    //    pet.setImage(dog);
+       ImageView park = new ImageView();
+       park.setImage(bg);
+      
+       BorderPane bp = new BorderPane();
+ 
+       HBox hBox = new HBox(10);
+       // VBox vBox = new VBox();
+
+       sPane.getChildren().add(park);
+       sPane.getChildren().add(bp);
+       
+     
+       hBox.setAlignment(Pos.BOTTOM_CENTER);
+       // vBox.setPadding(new Insets(20, 50, 0, 0));
+       // vBox.setAlignment(Pos.BOTTOM_CENTER);
+    //     @FXML
+    //     private void doggie(ActionEvent event) throws Exception {
+    //         GridPane gpane = new GridPane();
+    //         gpane.getChildren().add(pet);
+    //         Node source = (Node)event.getSource();
+    //         Integer colIndex = GridPane.getColumnIndex(source);
+    //         Integer rowIndex = GridPane.getRowIndex(source);
+    //         GridPane.setConstraints(pet, colIndex, rowIndex);
+    //    }
+
+        GridPane gpane = new GridPane();
+        //gpane.getChildren().add(pet);
+        gpane.setPadding(new Insets(2, 2, 2, 2));
+        gpane.setAlignment(Pos.CENTER);
+        gpane.getColumnConstraints().add(new ColumnConstraints(100));
+        gpane.getColumnConstraints().add(new ColumnConstraints(450));
+        gpane.getColumnConstraints().add(new ColumnConstraints(100));
+        gpane.getRowConstraints().add(new RowConstraints(200));
+        gpane.getRowConstraints().add(new RowConstraints(300));
+        gpane.getRowConstraints().add(new RowConstraints(100));
+        // gpane.setHgap(5);
+        // gpane.setVgap(10);
+        ImageView dog = new ImageView("images/dog.png");
+        gpane.add(dog, 1, 1);
+
+        ImageView deaddog = new ImageView("images/deaddog.jpg");
+ 
+       Rectangle r1 = new Rectangle(40, x);
+       r1.setStroke(Color.BLACK);
+       r1.setFill(Color.BLACK);
+       Rectangle r3 = new Rectangle(40, 300);
+       r3.setStroke(Color.BLACK);
+       r3.setFill(Color.WHITE);
+      
+       Rectangle r4 = new Rectangle(40, y);
+       r4.setStroke(Color.BLACK);
+       r4.setFill(Color.BLACK);
+      
+       Rectangle r5 = new Rectangle(40, 300);
+       r5.setStroke(Color.BLACK);
+       r5.setFill(Color.WHITE);
+       Label l1 = new Label("Hunger");
+       l1.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
+        l1.setTextFill(Color.BLACK);
+
+       Label l2 = new Label("Cleanliness");
+       l2.setFont(Font.font("Verdana", FontWeight.BOLD, 18));
+        l2.setTextFill(Color.BLACK);
+      
+       sPane.getChildren().addAll(r3, r1, r5, r4, l1, l2);
+       StackPane.setAlignment(r1, Pos.BOTTOM_LEFT);
+       StackPane.setAlignment(r3, Pos.BOTTOM_LEFT);
+       StackPane.setAlignment(r4, Pos.BOTTOM_RIGHT);
+       StackPane.setAlignment(r5, Pos.BOTTOM_RIGHT);
+      
+       StackPane.setAlignment(l1, Pos.CENTER_LEFT);
+       StackPane.setAlignment(l2, Pos.CENTER_RIGHT);
+       // Create a handler for changing text
+       EventHandler<ActionEvent> eventHandler = e -> {
+           if (r1.getHeight() != 0) {
+               x-=10;
+               r1.setHeight(x);
+           }
+      
+           else {
+            //x-=10;
+            //r1.setHeight(x);
+            gpane.add(deaddog, 1, 1);
+            gpane.getChildren().removeAll(dog, dogglasses, dogneck, dogneckhat, dogglassesneck, dogglassesneckhat, dogglasseshat, 
+                        dogbaseballbowtie, dogbaseballglassesbowtie, dogbaseball, dogbaseballglasses, dogbaseballglassesheart, dogbaseballglassespearl, 
+                        dogbaseballglassesscarf, dogbaseballglassestie, dogbaseballheart, dogbaseballpearl, dogbaseballscarf, dogbaseballsunglasses, 
+                        dogbaseballsunglassesbowtie, dogbaseballsunglassesheart, dogbaseballsunglassespearl, dogbaseballsunglassesscarf, 
+                        dogbaseballsunglassestie, dogbaseballtie, dogbow, dogbowTie, dogbowbowtie, dogbowglasses, dogbowglassesbowtie, dogbowglassesheart,
+                        dogbowglassespearl, dogbowglassesscarf, dogbowglassestie, dogbowheart, dogbowpearl, dogbowscarf, dogbowsunglasses,
+                        dogbowsunglassesbowtie, dogbowsunglassesheart, dogbowsunglassespearl, dogbowsunglassesscarf, dogbowsunglassestie, dogbowtie,
+                        dogflowerbowtie, dogflowerglasses, dogflowerglassesbowtie, dogflowerglassesheart, dogflowerglassespearl, dogflowerglassesscarf,
+                        dogflowerheart, dogflowerpearl, dogflowerscarf, dogflowersunglassesbowtie, dogflowersunglassesheart, 
+                        dogflowerglassestie, dogflower, dogflowersunglasses, dogflowersunglassespearl, dogflowersunglassesscarf, dogflowersunglassestie,
+                        dogflowertie, dogglassesbowtie, dogglassesheart, dogglassesscarf, dogglassestie, doghat, doghatbowtie, doghatglassesbowtie,
+                        doghatglassesheart, doghatglassesscarf, doghatglassestie, doghatheart, doghatscarf, doghatsunglasses, doghatsunglassesbowtie,
+                        doghatsunglassesheart, doghatsunglassesnecklace, doghatsunglassesscarf, doghatsunglassestie, doghattie, dogheart, dogprettyhat,
+                        dogprettyhatbowtie, dogprettyhatglasses, dogprettyhatglassesbowtie, dogprettyhatglassesheart, dogprettyhatglassespearl,
+                        dogprettyhatglassesscarf, dogprettyhatglassestie, dogprettyhatheart, dogprettyhatpearl, dogprettyhatscarf, dogprettyhatsunglasses,
+                        dogprettyhatsunglassesbowtie, dogprettyhatsunglassesheart, dogprettyhatsunglassespearl, dogprettyhatsunglassesscarf, dogprettyhatsunglassestie,
+                        dogprettyhattie, dogscarf, dogsunglasses, dogsunglassesbowtie, dogsunglassesheart, dogsunglassespearl, dogsunglassesscarf,
+                        dogsunglassestie, dogtie, dogtophat, dogtophatbowtie, dogtophatglasses, dogtophatglassesbowtie, dogtophatglassesheart,
+                        dogtophatglassespearl, dogtophatglassesscarf, dogtophatglassestie, dogtophatheart, dogtophatpearl, dogtophatscarf, dogtophatsunglasses,
+                        dogtophatsunglassesbowtie, dogtophatsunglassesheart, dogtophatsunglassespearl, dogtophatsunglassesscarf, dogtophatsunglassestie, dogtophattie);
+            PauseTransition pause = new PauseTransition(
+                Duration.seconds(3) 
+            );
+            pause.setOnFinished(
+                event -> {
+                Rectangle blackrect = new Rectangle(2000, 2000);
+                blackrect.setFill(Color.BLACK);
+                sPane.getChildren().add(blackrect);
+
+                GridPane dgrid = new GridPane();
+                sPane.getChildren().add(dgrid);
+                dgrid.setAlignment(Pos.CENTER);
+
+                Label deathmsg = new Label("YOU HAVE STARVED TO DEATH!");
+                deathmsg.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+                deathmsg.setTextFill(Color.RED);
+                dgrid.add(deathmsg, 1, 1);
+
+                Button deadbt = new Button("Press to retry!");
+                dgrid.add(deadbt, 1, 2);
+                deadbt.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override public void handle(ActionEvent e) {
+                    gpane.add(dog, 1, 1);
+                    gpane.getChildren().remove(deaddog);
+                    sPane.getChildren().remove(dgrid);
+                    sPane.getChildren().remove(blackrect);
+                    x =300;
+                    y = 300;
+                    r1.setHeight(x);
+                    r4.setHeight(y);
+                }
+                });
+            });
+            pause.play();
+    }
+    
+          
+           if (r4.getHeight() != 0) {
+               y-=5;
+               r4.setHeight(y);
+           }
+  
+           else {
+               y-=5;
+               r4.setHeight(y);
+           }
+       };
+       // Create an animation for alternating text
+       Timeline animation = new Timeline(
+           new KeyFrame(Duration.millis(5000), eventHandler));
+           animation.setCycleCount(Timeline.INDEFINITE);
+           animation.play(); // Start animation
+       // Pause and resume animation
+       sPane.setOnMouseClicked(e -> {
+           if (animation.getStatus() == Animation.Status.PAUSED) {
+               animation.play();
+           }
+      
+           else {
+           animation.pause();
+           }
+       });
+ 
+       Image image1 = new Image(getClass().getResourceAsStream("images/foodicon.png"));
+        Button food = new Button("");
+        food.setGraphic(new ImageView(image1));
+        food.setOnAction(new EventHandler<ActionEvent>() {
+            @Override public void handle(ActionEvent e) {
+                Image doggyfood = new Image("images/doggyfood.png");
+                Button foodexit = new Button("");
+ 
+                foodexit.setGraphic(new ImageView(doggyfood));
+                foodexit.setStyle("-fx-background-color: transparent;");
+                gpane.add(foodexit, 1, 2);
+                foodexit.setOnAction(new EventHandler<ActionEvent>() {
+                @Override public void handle(ActionEvent e) {
+                    gpane.getChildren().removeAll(foodexit);
+                    if (x < 300) {
+                        x+=20;
+                        r1.setHeight(x);
+                    }
+
+                    else if (x == 0) {
+                        
+                    }
+                }
+            });
+        }
+        });
+  
+       
+
 
         
        Button clothes = new Button("");
@@ -495,7 +519,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -1160,7 +1184,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -1825,7 +1849,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -2490,7 +2514,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -3155,7 +3179,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -3820,7 +3844,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -4482,7 +4506,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -5140,7 +5164,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -5798,7 +5822,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -6457,7 +6481,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -7115,7 +7139,7 @@ public class cB extends Application {
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbaseball, 1, 1);
                             }
-                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                        if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                         bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                         sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                             gpane.add(dogbow, 1, 1);
@@ -7771,7 +7795,7 @@ public class cB extends Application {
                     sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                         gpane.add(dogbaseball, 1, 1);
                         }
-                    if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                    if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                     bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                     sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                         gpane.add(dogbow, 1, 1);
@@ -8426,7 +8450,7 @@ public class cB extends Application {
                  sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                      gpane.add(dogbaseball, 1, 1);
                      }
-                 if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == false &&
+                 if (hatPressed == false && glassesPressed == false && necklacePressed == false && baseballPressed == false && bowPressed == true &&
                  bowtiePressed == false && flowerPressed == false && heartPressed == false && prettyhatPressed == false && scarfPressed == false &&
                  sunglassesPressed == false && tiePressed == false && tophatPressed == false){
                      gpane.add(dogbow, 1, 1);
@@ -9241,15 +9265,15 @@ public class cB extends Application {
                         Path path = new Path();
 
                         MoveTo moveTo = new MoveTo();
-                        moveTo.setX(600.0f);
+                        moveTo.setX(560.0f);
                         moveTo.setY(0.0f);
 
                         CubicCurveTo cubicTo = new CubicCurveTo();
-                        cubicTo.setControlX1(600.0f);
+                        cubicTo.setControlX1(560.0f);
                         cubicTo.setControlY1(50.0f);
-                        cubicTo.setControlX2(600.0f);
+                        cubicTo.setControlX2(560.0f);
                         cubicTo.setControlY2(100.0f);
-                        cubicTo.setX(600.0f);
+                        cubicTo.setX(560.0f);
                         cubicTo.setY(175.0f);
 
                         path.getElements().add(moveTo);
